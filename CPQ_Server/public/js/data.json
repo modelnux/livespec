@@ -1,0 +1,324 @@
+{
+  "products": [
+      {
+        "name": "16GB DDR2, 2x 8GB 1600 MT/s, Low Volt, Dual Rank, x4 Data Width",
+        "id": "900453",
+        "price": "$69.99",
+        "qty": 1,
+        "type": "bundle",
+        "section": "Bundle",
+        "billing": "One Time",
+        "_id": 1
+      },
+      {
+        "name": "PowerEclipse M420",
+        "id": "225-3285",
+        "price": "$2,239.00",
+        "qty": 1,
+        "type": "config",
+        "section": "Server",
+        "billing": "One Time",
+        "_id": 2
+      },
+      {
+        "name": "Intel Xeon E5-2420, 1.90GHz, 15M Cache, 7.2GT/s QPI, Turbo, 95W, Max Mem 1333",
+        "id": "000-001",
+        "price": "$700.00",
+        "qty": 1,
+        "type": "config",
+        "section": "Processor",
+        "billing": "One Time",
+        "_id": 3
+      },
+      {
+        "name": "Intel Xeon E5-2420 1.90GHz, 15M Cache",
+        "id": "000-002",
+        "price": "$800.00",
+        "qty": 1,
+        "type": "config",
+        "section": "Processor",
+        "billing": "One Time",
+        "_id": 4
+      },
+      {
+        "name": "Intel Xeon E5-2430 2.20GHz, 15M Cache",
+        "id": "000-002",
+        "price": "$800.00",
+        "qty": 1,
+        "type": "config",
+        "section": "Processor",
+        "billing": "One Time",
+        "_id": 5
+      },
+      {
+        "name": "Intel Xeon E5-2430L 2.00GHz, 15M Cache",
+        "id": "000-002",
+        "price": "$800.00",
+        "qty": 1,
+        "type": "config",
+        "section": "Processor",
+        "billing": "One Time",
+        "_id": 6
+      },
+      {
+        "name": "Single Processor",
+        "id": "000-002",
+        "price": "$1,100.00",
+        "qty": 1,
+        "type": "config",
+        "section": "Additional Processors",
+        "billing": "One Time",
+        "_id": 7
+      },
+      {
+        "name": "Two Processors",
+        "id": "000-002",
+        "price": "$2,000.00",
+        "qty": 1,
+        "type": "config",
+        "section": "Additional Processors",
+        "billing": "One Time",
+        "_id": 8
+      },
+      {
+        "name": "Advanced ECC",
+        "id": "000-002",
+        "price": "$0.00",
+        "qty": 1,
+        "type": "config",
+        "section": "Memory Configuration",
+        "billing": "One Time",
+        "_id": 9
+      },
+      {
+        "name": "Performance Optimized",
+        "id": "000-002",
+        "price": "$0.00",
+        "qty": 1,
+        "type": "config",
+        "section": "Memory Configuration",
+        "billing": "One Time",
+        "_id": 10
+      },
+      {
+        "name": "2GB DDR2, 1600 MT/s",
+        "id": "LOV322",
+        "price": "$100.00",
+        "qty": 1,
+        "type": "config",
+        "section": "Memory Modules",
+        "billing": "One Time",
+        "_id": 11
+      },
+      {
+        "name": "4GB DDR2, 1600 MT/s",
+        "id": "LOV322",
+        "price": "$200.00",
+        "qty": 1,
+        "type": "config",
+        "section": "Memory Modules",
+        "billing": "One Time",
+        "_id": 12
+      },
+      {
+        "name": "16GB DDR2, 1600 MT/s",
+        "id": "LOV322",
+        "price": "$300.00",
+        "qty": 1,
+        "type": "config",
+        "section": "Memory Modules",
+        "billing": "One Time",
+        "_id": 13
+      },
+      {
+        "name": "8GB DDR2, 1600 MT/s, Standard Volt, Single Rank, x8 Data Width",
+        "id": "LOV322",
+        "price": "$500.00",
+        "qty": 1,
+        "type": "config",
+        "section": "Memory Modules",
+        "billing": "One Time",
+        "_id": 14
+      },
+      {
+        "name": "Intel Xeon E5-2420 1.90GHz, 15M Cache, 7.2GT/s QPI, Turbo,6C, 95W, Max Mem 1333",
+        "id": "900475",
+        "price": "$246.00",
+        "qty": 1,
+        "type": "product",
+        "section": "Processor",
+        "billing": "One Time",
+        "_id": 15
+      },
+      {
+        "name": "4GB SDRAM, 1333 MT/s",
+        "id": "RR36DW",
+        "price": "$14.30",
+        "qty": 1,
+        "type": "product",
+        "section": "Soild State Drives",
+        "billing": "One Time",
+        "_id": 16
+      },
+      {
+        "name": "Intel Xeon E5-2420 1.90GHz",
+        "id": "RR36DW",
+        "price": "$14.30",
+        "qty": 1,
+        "type": "product",
+        "section": "Soild State Drives",
+        "billing": "One Time",
+        "_id": 17
+      },
+      {
+        "name": "400GB Solid State Drive 5400RPM 64MB SATA 6/GBS",
+        "id": "RR36DW",
+        "price": "$700.00",
+        "qty": 1,
+        "type": "product",
+        "section": "Solid State Drives",
+        "billing": "One Time",
+        "_id": 18
+      },
+      {
+        "name": "16GB RDIMM, 1333 MT/s, Low Volt, Dual Rank, x4 Data Width",
+        "id": "RR36DW",
+        "price": "$315.00",
+        "qty": 1,
+        "type": "product",
+        "section": "Solid State Drives",
+        "billing": "One Time",
+        "_id": 19
+      },
+      {
+        "name": "Red Hat Enterprise Linux Non Factory Install,x64,Req Lic & Sub Selection",
+        "id": "900408",
+        "price": "$314.30",
+        "qty": 1,
+        "type": "product",
+        "section": "Operating System",
+        "billing": "One Time",
+        "_id": 20
+      },
+      {
+        "name": "SUSE Linux Enterprise Server, Non Factory Install",
+        "id": "900409",
+        "price": "$314.30",
+        "qty": 1,
+        "type": "product",
+        "section": "Operating System",
+        "billing": "One Time",
+        "_id": 21
+      },
+      {
+        "name": "Windows Server 2012 R2 SP1, Datacenter Edition",
+        "id": "900405",
+        "price": "$314.30",
+        "qty": 1,
+        "type": "product",
+        "section": "Operating System",
+        "billing": "One Time",
+        "_id": 22
+      },
+      {
+        "name": "Windows Server 2012 R2 SP1, Enterprise Edition",
+        "id": "900406",
+        "price": "$314.30",
+        "qty": 1,
+        "type": "product",
+        "section": "Operating System",
+        "billing": "One Time",
+        "_id": 23
+      },
+      {
+        "name": "Hardware RAID 0",
+        "id": "900436",
+        "price": "$0.00",
+        "qty": 1,
+        "type": "product",
+        "section": "RAID Configuration",
+        "billing": "One Time",
+        "_id": 24
+      },
+      {
+        "name": "Hardware RAID 1",
+        "id": "900436",
+        "price": "$314.30",
+        "qty": 1,
+        "type": "product",
+        "section": "RAID Configuration",
+        "billing": "One Time",
+        "_id": 25
+      },
+      {
+        "name": "200 GB Solid State Drive uSATA Read Intensive Slim MLC 3Gbps 1.8in Hot-plug",
+        "id": "900441",
+        "price": "$599.00",
+        "qty": 1,
+        "type": "product",
+        "section": "Solid State Drives",
+        "billing": "One Time",
+        "_id": 26
+      },
+      {
+        "name": "300 GB Solid State Drive uSATA Read Intensive Slim MLC 3Gbps 1.8in Hot-plug",
+        "id": "900442",
+        "price": "$900.00",
+        "qty": 1,
+        "type": "product",
+        "section": "Solid State Drives",
+        "billing": "One Time",
+        "_id": 27
+      },
+      {
+        "name": "iDRAC7 Enterprise for Blades",
+        "id": "900443",
+        "price": "$399.00",
+        "qty": 1,
+        "type": "product",
+        "section": "Embedded System Management",
+        "billing": "One Time",
+        "_id": 28
+      },
+      {
+        "name": "iDRAC7 Enterprise for Blades with Vflash, 16GB SD card",
+        "id": "900419",
+        "price": "$478.00",
+        "qty": 1,
+        "type": "product",
+        "section": "Embedded System Management",
+        "billing": "One Time",
+        "_id": 29
+      },
+      {
+        "name": "iDRAC7 Enterprise for Blades with Vflash, 8GB SD card",
+        "id": "900420",
+        "price": "$448.00",
+        "qty": 1,
+        "type": "product",
+        "section": "Embedded System Management",
+        "billing": "One Time",
+        "_id": 30
+      },
+      {
+        "name": "RDIMM Installation Instruction Manual",
+        "id": "900420",
+        "price": "$0.00",
+        "qty": 1,
+        "type": "product",
+        "section": "System Management Documentation",
+        "billing": "One Time",
+        "_id": 31
+      },
+      {
+        "name": "Basic Hardware Warranty Repair: 5x10 HW-Only, 5x10 NBD Onsite",
+        "id": "900429",
+        "price": "$19.99/yr",
+        "qty": 1,
+        "type": "product",
+        "section": "PRO System Mgmt. Options",
+        "billing": "Yearly",
+        "_id": 32
+      }
+  ]
+}

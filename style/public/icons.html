@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html ng-app="mnApp">
+<head>
+	<title>Model N Styleguide</title>
+	
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/mCSB_buttons.png">
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
+		<link rel="stylesheet" type="text/css" href="css/icons.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.structure.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+<!-- LEFT NAV -->
+<div class="left-nav mCustomScrollbar" data-mcs-theme="light-4" ng-controller="navMenu">
+	<div class="left-nav-inner">
+	<img src="https://www.google.com/a/cpanel/modeln.com/images/logo.gif?service=google_default">
+		<div class="first-nav">Home</div>
+		<div class="first-nav">Products</div>
+		<div ng-repeat="prod in products">
+			<div class=" clearfix product-name">{{prod.name}} <i class="pull-right fa fa-angle-down"></i></div>
+			<div class="cats-group" >
+			<div ng-repeat="cats in productCats" class="second-nav">
+				<div ng-click="getPage(cats.name, prod.name)" class="product-cat">{{cats.name}}</div>
+					<div class="subcat-group">
+						<div ng-click="getPageSub(cats.subcat1, cats.name, prod.name)" ng-show="cats.subcat1" class="subcat">{{cats.subcat1}}</div>
+						<div ng-click="getPageSub(cats.subcat2, cats.name, prod.name)" ng-show="cats.subcat2" class="subcat">{{cats.subcat2}}</div>
+						<div ng-click="getPageSub(cats.subcat3, cats.name, prod.name)" ng-show="cats.subcat3" class="subcat">{{cats.subcat3}}</div>
+						<div ng-click="getPageSub(cats.subcat4, cats.name, prod.name)" ng-show="cats.subcat4" class="subcat">{{cats.subcat4}}</div>
+						<div ng-click="getPageSub(cats.subcat5, cats.name, prod.name)" ng-show="cats.subcat5" class="subcat">{{cats.subcat5}}</div>
+					</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>	<!-- /.left-nav -->
+<!-- /LEFT NAV -->
+
+
+<!-- CENTER BODY -->
+<div id="centerBody" class="centerBody mCustomScrollbar" data-mcs-theme="rounded-dark">
+	<section class="section sectionIntro">
+		<h1>Icons</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ducimus voluptatem hic aperiam atque sapiente quaerat esse vel at tenetur repudiandae, ullam ipsa vero voluptates sed nisi asperiores quia necessitatibus.</p>
+	</section>
+
+	
+	<section class="section">
+		<h2>Overview &amp; Specifications</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ducimus voluptatem hic aperiam atque sapiente quaerat esse vel at tenetur repudiandae, ullam ipsa vero voluptates sed nisi asperiores quia necessitatibus.</p>
+	</section>
+
+	<section class="section">
+		<h2>Actions</h2>
+		<div class="iconRow">
+			<div class="iconTab">
+				<p><i class="icon-file9"></i></p>
+				<p class="iconDesc">View</p>
+				<p class="iconName">icon-file9</p>
+				<p class="iconCode">/e08d</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-file9"></i></p>
+				<p class="iconDesc">Edit</p>
+				<p class="iconName">icon-file9</p>
+				<p class="iconCode">/e08d</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-file9"></i></p>
+				<p class="iconDesc">Delete/Remove</p>
+				<p class="iconName">icon-file9</p>
+				<p class="iconCode">/e08d</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-file9"></i></p>
+				<p class="iconDesc">Add/Create</p>
+				<p class="iconName">icon-file9</p>
+				<p class="iconCode">/e08d</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-file9"></i></p>
+				<p class="iconDesc">Copy/Clone</p>
+				<p class="iconName">icon-file9</p>
+				<p class="iconCode">/e08d</p>
+			</div>
+		</div>
+		<div class="iconRow">
+			<div class="iconTab">
+				<p><i class="icon-close"></i></p>
+				<p class="iconDesc">Close/Exit</p>
+				<p class="iconName">icon-close</p>
+				<p class="iconCode">/e36b</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-disk"></i></p>
+				<p class="iconDesc">Save</p>
+				<p class="iconName">icon-disk</p>
+				<p class="iconCode">/e08d</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-print"></i></p>
+				<p class="iconDesc">Print</p>
+				<p class="iconName">icon-print</p>
+				<p class="iconCode">/e117</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-upload2"></i></p>
+				<p class="iconDesc">Upload/Import</p>
+				<p class="iconName">icon-upload2</p>
+				<p class="iconCode">/e2b9</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-download2"></i></p>
+				<p class="iconDesc">Download/Export</p>
+				<p class="iconName">icon-download2</p>
+				<p class="iconCode">/e2b8</p>
+			</div>
+		</div>
+		<div class="iconRow">
+			<div class="iconTab">
+				<p><i class="icon-menu2"></i></p>
+				<p class="iconDesc">More Actions</p>
+				<p class="iconName">icon-menu2</p>
+				<p class="iconCode">/e2aa</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-filter3"></i></p>
+				<p class="iconDesc">Filter</p>
+				<p class="iconName">icon-filter3</p>
+				<p class="iconCode">/e445</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-sort"></i></p>
+				<p class="iconDesc">Sort</p>
+				<p class="iconName">icon-sort</p>
+				<p class="iconCode">/e425</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-chevron-right"></i></p>
+				<p class="iconDesc">Expand</p>
+				<p class="iconName">icon-chevron-right</p>
+				<p class="iconCode">/f054</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-chevron-down"></i></p>
+				<p class="iconDesc">Collapse</p>
+				<p class="iconName">icon-chevron-down</p>
+				<p class="iconCode">/f078</p>
+			</div>
+		</div>
+		<div class="iconRow">
+			<div class="iconTab">
+				<p><i class="icon-cog"></i></p>
+				<p class="iconDesc">Configure</p>
+				<p class="iconName">icon-cog</p>
+				<p class="iconCode">/e1df</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-menu10"></i></p>
+				<p class="iconDesc">List Arrow</p>
+				<p class="iconName">icon-menu10</p>
+				<p class="iconCode">/e418</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-arrow-down2"></i></p>
+				<p class="iconDesc">Pop Up Arrow</p>
+				<p class="iconName">icon-arrow-down2</p>
+				<p class="iconCode">/e3b6</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-checkbox-checked"></i></p>
+				<p class="iconDesc">Checkbox</p>
+				<p class="iconName">icon-checkbox-checked</p>
+				<p class="iconCode">/e42e</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-checkbox-unchecked"></i></p>
+				<p class="iconDesc">Checkbox Two</p>
+				<p class="iconName">icon-checkbox-unchecked</p>
+				<p class="iconCode">/e42f</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<h2>Navigation</h2>
+		<div class="iconRow">
+			<div class="iconTab">
+				<p><i class="icon-home4"></i></p>
+				<p class="iconDesc">Home</p>
+				<p class="iconName">icon-home4</p>
+				<p class="iconCode">/e003</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-arrow-right19"></i></p>
+				<p class="iconDesc">Forward</p>
+				<p class="iconName">icon-arrow-right19</p>
+				<p class="iconCode">/f061</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-arrow-left18"></i></p>
+				<p class="iconDesc">Back</p>
+				<p class="iconName">icon-arrow-left18</p>
+				<p class="iconCode">/f060</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-arrow-up17"></i></p>
+				<p class="iconDesc">Up</p>
+				<p class="iconName">icon-arrow-up17</p>
+				<p class="iconCode">/f062</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-arrow-down17"></i></p>
+				<p class="iconDesc">Down</p>
+				<p class="iconName">icon-arrow-down17</p>
+				<p class="iconCode">/f063</p>
+			</div>
+		</div>
+		<div class="iconRow">
+			<div class="iconTab">
+				<p><i class="icon-menu3"></i></p>
+				<p class="iconDesc">Menu</p>
+				<p class="iconName">icon-menu3</p>
+				<p class="iconCode">/e2ac</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-user"></i></p>
+				<p class="iconDesc">User/Account</p>
+				<p class="iconName">icon-user</p>
+				<p class="iconCode">/e185</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<h2>Indication</h2>
+		<div class="iconRow">
+			<div class="iconTab">
+				<p><i class="icon-bell2"></i></p>
+				<p class="iconDesc">Notification</p>
+				<p class="iconName">icon-bell2</p>
+				<p class="iconCode">/e08d</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-notification2"></i></p>
+				<p class="iconDesc">Error</p>
+				<p class="iconName">icon-notification2</p>
+				<p class="iconCode">/e08d</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-question-circle"></i></p>
+				<p class="iconDesc">Help</p>
+				<p class="iconName">icon-question-circle</p>
+				<p class="iconCode">/e08d</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-calendar4"></i></p>
+				<p class="iconDesc">Datepicker</p>
+				<p class="iconName">icon-calendar4</p>
+				<p class="iconCode">/e08d</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-search3"></i></p>
+				<p class="iconDesc">Search</p>
+				<p class="iconName">icon-search3</p>
+				<p class="iconCode">/e08d</p>
+			</div>
+		</div>
+		<div class="iconRow">
+			<div class="iconTab">
+				<p><i class="icon-file9"></i></p>
+				<p class="iconDesc">Attachment</p>
+				<p class="iconName">icon-file9</p>
+				<p class="iconCode">/e08d</p>
+			</div>
+			<div class="iconTab">
+				<p><i class="icon-file9"></i></p>
+				<p class="iconDesc">Checkmark</p>
+				<p class="iconName">icon-file9</p>
+				<p class="iconCode">/e08d</p>
+			</div>
+
+		</div>
+	</section>
+</div> <!-- center-body -->
+<!-- /CENTER BODY -->
+
+<!-- RIGHT MENU -->
+<div ng-controller="rightMenu" class="right-nav">
+	
+
+</div>
+<!-- /RIGHT MENU -->
+
+ 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+ 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+ 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+ 	<script src="//cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/smooth-scroll.min.js"></script>
+	<script type="text/javascript" src="js/scrollspy.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
+	<script type="text/javascript" src="js/controller.js"></script>
+</body>
+
+</html>

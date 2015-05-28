@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RME LS Livespec</title>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/mCSB_buttons.png">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/fonts.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/modals.css">
+</head>
+<body>
+<div class="loader"></div>
+
+
+
+
+<!-- TOP NAV -->
+<div class="topNav clearfix">
+	<ul class="nav clearfix">
+		<li class="menu"><i class="fa fa-reorder"></i></li>
+		<li class="back"><i class="fa fa-long-arrow-left"></i></li>
+		<li class="fwd disabled"><i class="fa fa-long-arrow-right"></i></li>
+		<li class="refresh"><i class="fa fa-refresh"></i></li>
+		<li class="home active"><i class="fa fa-home"></i></li>
+		<li class="config drop">Configuration <i class="fa fa-caret-down"></i></li>
+		<li class="customers drop">Customers <i class="fa fa-caret-down"></i></li>
+		<li class="products drop">Products <i class="fa fa-caret-down"></i></li>
+		<li class="pricing drop">Pricing <i class="fa fa-caret-down"></i></li>
+		<li class="contracts drop">Contracts <i class="fa fa-caret-down"></i></li>
+		<li class="compliance drop">Compliance <i class="fa fa-caret-down"></i></li>
+		<li class="sales drop">Sales <i class="fa fa-caret-down"></i></li>
+		<li class="external drop">External Sales <i class="fa fa-caret-down"></i></li>
+		<li class="extra drop">Extra <i class="fa fa-caret-down"></i></li>
+		<li class="user drop"><p>Alex Sawsienowicz</p> <i class="fa fa-caret-down"></i></li>
+		<li class="help active"><i class="fa fa-support"></i></li>
+	</ul>
+</div>
+<!-- /TOP NAV -->
+
+
+
+<!-- BREADCRUMBS -->
+<div class="breadcrumb clearfix">
+	<ul class="crumbs clearfix">
+		<li>Home</li>
+	</ul>
+
+		<button class="table-btn pull-right"><i class="fa fa-file-o"></i> New <i class="fa fa-caret-down"></i></button>
+	
+</div>
+<!-- /BREADCRUMBS -->
+
+	<div class="mainBody clearfix"><!-- MAIN-BODY -->
+
+	<div class="leftPanel ui-layout-west"><!-- LEFT-PANEL -->
+		<div class="section section1">
+			<h2><i class="fa fa-arrow-circle-o-up"></i>MY TASKS</h2>
+			<ul class="sectionActions">
+				<li><i class="fa fa-search"></i>Find User</li>
+				<li><i class="fa fa-cloud-upload"></i>Import to Update Price</li>
+				<li><i class="fa fa-sitemap"></i>New Approval Route</li>
+				<li><i class="fa fa-pie-chart"></i>New Business Segment</li>
+				<li><i class="fa fa-file-o"></i>New Contract</li>
+				<li><i class="fa fa-file-text-o"></i>New Contract Template</li>
+				<li><i class="fa fa-flag"></i>New Mass Update</li>
+				<li><i class="fa fa-sitemap"></i>New Organization</li>
+				<li><i class="fa fa-user"></i>New Role</li>
+				<li><i class="fa fa-user-plus"></i>New User</li>
+				<li><i class="fa fa-cog"></i>Customize My Tasks</li>
+			</ul>
+		</div>
+		<div class="section section2">
+			<h2><i class="fa fa-arrow-circle-o-up"></i>QUICK SEARCH</h2>
+			<div class="subsection clearfix">
+				<p>Choose an area to search</p>
+				<input value="Contracts"class="select-input" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+				<input type="text" class="search-input"></i>
+				<button class="btn search-btn"><i class="fa fa-search"></i></button>
+			
+			</div>
+		</div>
+
+	</div><!-- /LEFT-PANEL -->
+	
+
+	<div class="rightPanel clearfix ui-layout-center"><!-- RIGHT-PANEL -->
+		
+		<!-- TABLE -->
+		
+		<div class="tableBody homeTable">
+		<h2 class="pull-left table-title"><i class="fa fa-arrow-circle-o-up"></i> ALERTS</h2>
+		<p class="pull-right table-count">1 to 5 of 5 Total</p>
+			<table>
+				<tr>
+					<td>Alert</td>
+					<td>Date</td>
+					<td>Reference</td>
+				</tr>
+				<tr>
+					<td>Dataflow Complete w/ Errors</td>
+					<td>12/18/2014</td>
+					<td><p>100200</p></td>
+				</tr>
+				<tr>
+					<td>Strategy Activated</td>
+					<td>12/18/2014</td>
+					<td><p>000000313</p></td>
+				</tr>
+				<tr>
+					<td>Strategy Approved</td>
+					<td>12/18/2014</td>
+					<td><p>Def_Awarded_Ctrt1</p></td>
+				</tr>
+				<tr>
+					<td>Dataflow Configuration Deactivated</td>
+					<td>12/18/2014</td>
+					<td><p>550001_WAC_PriceList</p></td>
+				</tr>
+				<tr>
+					<td>Price List Approved</td>
+					<td>12/18/2014</td>
+					<td><p>1000300</p></td>
+				</tr>
+			</table>
+
+		</div><!-- /TABLE -->
+
+		<!-- TABLE 2-->
+		<div class="tableBody homeTable">
+		<h2 class="pull-left table-title"><i class="fa fa-arrow-circle-o-up"></i> RECENTLY VIEWED ITEMS</h2>
+		<p class="pull-right table-count">1 to 5 of 5 Total</p>
+			<table>
+				<tr>
+					<td>Name</td>
+					<td>Date</td>
+				</tr>
+				<tr>
+					<td><p>Configuration Console > Configuration > DevDefaultCustomConfig</p></td>
+					<td>12/18/2014 05:11 PM</td>
+				</tr>
+				<tr>
+					<td><p>Medicaid Program - Test_Mano1</p></td>
+					<td>12/18/2014 05:11 PM</td>
+				</tr>
+				<tr>
+					<td><p>Medicaid Claim - AL-199704-4444222-001 (In Process)</p></td>
+					<td>12/18/2014 05:11 PM</td>
+				</tr>
+				<tr>
+					<td><p>Medicaid Claim - AZ-199704-4444222-001 (In Process)</p></td>
+					<td>12/18/2014 05:11 PM</td>
+				</tr>
+				<tr>
+					<td><p>Medicaid Claim - CA-199704-4444222-001 (In Process)</p></td>
+					<td>12/18/2014 05:11 PM</td>
+				</tr>
+			</table>
+
+		</div><!-- /TABLE 2-->
+	
+	</div><!-- /RIGHT-PANEL -->
+
+</div><!-- /MAIN-BODY -->
+
+
+<footer class="clearfix">
+	<div class="logo pull-left"></div>
+	<div class="alerts pull-right"><i class="fa fa-bell-o"></i> 5 Alerts</div>
+
+</footer>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+	<script src="http://layout.jquery-dev.com/lib/js/jquery.layout-latest.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="js/controller.js"></script>
+	<script type="text/javascript" src="js/wizard.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/modals.js"></script>
+</body>
+</html>

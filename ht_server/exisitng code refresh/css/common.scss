@@ -1,0 +1,2592 @@
+@import 'main';
+
+/* ************************* */
+html {
+  /*overflow:hidden;*/
+  font-family: "Helvetica Neue";
+  font-weight: 400;
+  color: #666666;
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+}
+
+table {
+  font-family: "Helvetica Neue";
+  font-weight: 400;
+  color: #666666;
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+}
+
+input[type="text"],
+input[type="file"],
+textarea, select
+{
+  border: 1px solid #c1c1c1;
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  color:#454545;
+  background-color: #FCFCFC;
+  font-family:Verdana, Helvetica, Arial, "San Serif";
+  font-size:11px;
+}
+
+input[type="checkbox"]
+{
+  vertical-align: middle;
+}
+
+
+
+input[type="text"]:hover,
+input[type="file"]:hover,
+textarea:hover, select:hover
+{
+  border: 1px solid #f17a22;
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+button
+{
+  color:#1b4860;
+  background-color: #aabed8;
+  font-family:Verdana, Helvetica, Arial, "San Serif";
+  font-size:11px;
+  font-weight: bold;
+  border: 1px solid #1C5298;
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+}
+
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+button:hover
+{
+  border: 1px solid #f17a22;
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a img:hover, input:hover {
+  box-shadow: 0 0 4px 2px rgba(0,0,0,0.3) inset;
+  border: 1px solid #F17A22;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+a img, a img.dis:hover {
+  display:none;
+}
+
+/* unvisited link */
+a:link {
+  color: $text-black;
+  text-decoration: none;
+}
+/* visited link */
+a:visited { color:#F17A22; }
+/* mouse over link */
+a:hover { text-decoration:underline; }
+/* selected link */
+a:active {
+  color:#F17A22;
+  text-decoration:underline;
+}
+
+ul {text-align: left;}
+
+/*  =============================== WebPage =============================== */
+
+body {
+  margin:  0px;
+  padding: 74px 0 34px 0;
+}
+
+/*Header */
+div.hDiv {
+  position:fixed;
+  top:0px;  left: 0px;
+  width:100%;
+  margin: 0px;
+  /*border: 1px solid red;*/
+  background-color: #EEEEEE;
+  z-index:1000;
+  height: 42px;
+}
+
+div.fDiv {
+  position:fixed;
+  /*border:1px solid orange;*/
+  background-color: #FCFCFC;
+  bottom:0px; left: 0px;
+  width:100%;
+  margin: 0px;
+}
+
+#ftrPDv {
+  /*display:none;*/
+  border: 1px solid transparent;
+  float:right;
+  /*clear:right;*/
+  /*width:0%;*/
+}
+
+/* Data */
+div.dDiv {
+    float:left;
+  /*border: 1px solid blue;*/
+  height:100%;
+  margin: 0px;
+  padding: 0px;
+  width:100%;
+}
+
+
+div.selVDiv {
+  display:inline-block;
+  border: 1px solid transparent;
+  float:left;
+  /*float:right;*/
+  /*width:50%;*/
+  z-index: 1;
+  vertical-align:middle;
+  padding:0px 0px 0px 0px;
+}
+
+span.recLinksSpan  {
+  display:inline-block;
+  border: 1px solid transparent;
+  margin: 0 auto;
+  white-space:nowrap;
+  z-index: 1;
+  vertical-align:middle;
+  padding:0px 0px 0px 0px;
+}
+
+.dDiv .mActDiv {
+  /*border: 1px solid orange;*/
+  width:100%;
+}
+
+.hDiv .mActDiv {
+  clear:right;
+}
+
+.mActDiv {
+  /*border: 1px solid red;*/
+  /*float:left;*/
+  float:right;
+  /*width:100%;*/
+  /*right:0px;*/
+  z-index: 1;
+  vertical-align:middle;
+  padding:0px 0px 0px 0px;
+}
+
+.tCntr {
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.iCellLeft {
+  text-align:left;
+}
+
+/* =============================== generic CSS menu bar =============================== */
+/*
+  menu bar div class = mnuBarDiv
+  add class to ul for sub menu based on direction: subDn, subRt, subLt
+  add class to li to disable: dis
+  add class to li to make it as sep : sep
+  class for ul : mnuBarUl
+  class for li : mnuBarLi
+  add span for menu item li anchor if it has sub menu
+  add class for menu item li subMenu Direction if it has sub menu
+
+*/
+
+.mnuBarDiv {
+  z-index: 11;
+  list-style-type: none;
+}
+/* hide all sub menus */
+.mnuBarDiv ul ul  {
+  /*display:none;*/
+  visibility: hidden;
+  /*opacity: 0;*/
+  -webkit-transition: visibility 0s 0.3s, opacity 0.3s linear;
+  -moz-transition: visibility 0s 0.3s, opacity 0.3s linear;
+  -ms-transition: visibility 0s 0.3s, opacity 0.3s linear;
+  -o-transition: visibility 0s 0.3s, opacity 0.3s linear;
+  transition: visibility 0s 0.3s, opacity 0.3s linear;
+}   /*sub menus */
+/* on main menu link hover display first level sub menu*/
+/*.mnuBarDiv ul li:hover > ul {*/
+
+.mnuBarDiv ul li.mnhvr > ul {
+  visibility: visible;
+  opacity:1;
+}
+
+.mnuBarDiv ul ul li:hover> ul {
+  visibility: visible;
+  opacity:1;
+}
+
+
+ /* sub menu positioin for all level */
+/* down sub menus position * can be based on direction */
+.mnuBarDiv ul ul.subDn { position: absolute;left:-2px;top:99%; }
+ /* right sub menus position * can be based on direction */
+.mnuBarDiv ul ul.subRt { position: absolute;left:98%;top:-2px; }
+ /* left sub menus position * can be based on direction */
+.mnuBarDiv ul ul.subLt { position: absolute;left:-98%;top:-2px; }
+/* second level onwards sub menus position * can be based on direction */
+/*.mnuBarDiv ul ul.subUp{position: absolute;right:2px;bottom:1%;}  */
+
+/* main menu bar*/
+.mnuBarDiv ul {
+  /*border: 1px solid black;*/
+  margin:0px;
+  list-style:none;
+  padding:0px 0px 0px 0px;
+  background-color: #1b4860;
+
+  zoom:1;
+  /*width: 100%;*/
+  float:left;
+  z-index: 11;
+  /*display:block;*/
+  /*position:absolute;*/
+}
+
+/* sub menus  : overide from above*/
+.mnuBarDiv ul ul {
+  background-color: #AABED8;
+  border: 1px solid #1B4860;
+
+  width:150.15px;
+  z-index: 11;
+  /*position:absolute;*/
+}
+
+/* menu bar items */
+.mnuBarDiv ul li{
+  padding: 10px 15px;
+  margin: 0px 1px;
+  border-bottom: 4px solid transparent;
+  cursor: pointer;
+}
+
+/*main menu span for item with sub menu arrow*/
+.mnuBarDiv ul span {
+}
+
+.mnuBarDiv ul li.subDn span{ background-image:url('../img/arr_dn_white.gif'); }
+.mnuBarDiv ul li.subRt span{ background-image:url('../img/arr_rt_white.gif'); }
+.mnuBarDiv ul li.subLt span{ background-image:url('../img/arr_lt_white.gif'); }
+
+.mnuBarDiv ul ul li.subDn span{ background-image:url('../img/arr_dn_blue.gif'); }
+.mnuBarDiv ul ul li.subRt span{ background-image:url('../img/arr_rt_blue.gif'); }
+.mnuBarDiv ul ul li.subLt span{ background-image:url('../img/arr_lt_blue.gif'); }
+
+/* menu bar items - keep this here and don't merge with previous as
+   chrome,  firefox will not float it properly otherwise*/
+.mnuBarDiv ul li { float:left; }
+
+/* sub menu bar's menu items*/
+.mnuBarDiv ul ul li { float:none; }
+
+/* sub menu link*/
+.mnuBarDiv ul ul a {
+  text-align:left;
+  white-space:normal;
+}
+
+/* main menu bar link */
+.mnuBarDiv ul a:active, .mnuBarDiv ul a:focus { outline-style:none; }
+
+/* main menu bar items link - enabled no hover,  disable hover, sep hover*/
+.mnuBarDiv ul a,
+.mnuBarDiv ul li.dis a:hover,
+.mnuBarDiv ul li.sep a:hover,
+.mnuBarDiv ul li.sep:hover > a,
+.mnuBarDiv ul li.dis:hover > a
+{
+  cursor:pointer;
+}
+
+/* sub menu bar items link, - enabled no hover, disable hover, sep hover*/
+.mnuBarDiv ul ul a,
+.mnuBarDiv ul ul li.dis a:hover,
+.mnuBarDiv ul ul li.sep a:hover,
+.mnuBarDiv ul ul li.sep:hover > a,
+.mnuBarDiv ul ul li.dis:hover > a,
+.mnuBarDiv ul li.sep ul li:hover > a,
+.mnuBarDiv ul li.dis ul li:hover > a
+{
+  background-color: #AABED8;
+}
+
+
+.mnuBarDiv ul li.sel > a
+{
+  background-color: #ededed;
+  color:#454545;
+}
+
+/* main menu sep span ? might not needed*/
+/*.mnuBarDiv ul li.sep span{ float:none;  padding-right:0; width:3; height:100%; display:inline-block; background-color:#CECECE;  background-image:none;}*/
+/* sub menu sep span ? might not needed*/
+/*.mnuBarDiv ul ul li.sep span{ width:100%;  height:3; }*/
+
+/* main menu item hover*/
+.mnuBarDiv ul li.mnhvr { position:relative; }
+.mnuBarDiv ul ul li:hover { position:relative; }
+
+.mnuBarDiv ul li { position:relative; }
+
+/*.tabBar.mnuBarDiv ul li {*/
+  /*[if !IE] position:relative;*/
+/*}*/
+/*.topMnuDiv:hover .mnuBarDiv ul li { position:static; }*/
+
+/* main menu item hover link*/
+.mnuBarDiv ul li:hover > a, .mnuBarDiv ul li.mnhvr > a {
+  background-color: #ededed;
+  text-decoration: underline;
+}
+
+.mnuBarDiv li.subDn.mnhvr>a, li.mnhvr.subLt>a, .mnuBarDiv li.mnhvr.subRt>a,
+.mnuBarDiv li.subDn:hover>a, li.subLt:hover>a, .mnuBarDiv li.subRt:hover>a
+{
+  text-decoration:none;
+}
+
+/* main menu item link hover*/
+.mnuBarDiv ul li a:hover, .mnuBarDiv ul>li.mnhvr>a {
+  position:relative;
+  background-color:#ededed;
+  text-decoration:underline;
+}
+
+/* sub menu item hover link*/
+.mnuBarDiv ul ul li:hover > a { }
+
+/* sub menu item link hover*/
+.mnuBarDiv ul ul li a:hover { }
+
+.mnuBarDiv ul img {
+  /*border-top: 1px solid transparent;*/
+  /*border: none;*/
+  float:left;
+  /*_float:none;*/
+  margin-right:2px;
+  width:16px; height:16px;
+}
+
+/*on menu link hover hide submenu's submenu*/  /* looks like not required */
+.mnuBarDiv ul a:hover ul ul  {
+  /*display:none;*/
+  visibility: hidden;
+  /*opacity: 0;*/
+  -webkit-transition: visibility 0s 0.3s, opacity 0.3s linear;
+  -moz-transition: visibility 0s 0.3s, opacity 0.3s linear;
+  -ms-transition: visibility 0s 0.3s, opacity 0.3s linear;
+  -o-transition: visibility 0s 0.3s, opacity 0.3s linear;
+  transition: visibility 0s 0.3s, opacity 0.3s linear;
+}
+
+/* main menu sep item */
+.mnuBarDiv ul li.sep {
+  /*color: #797979;*/
+display:none;
+}
+
+/* main menu disabled item link*/
+.mnuBarDiv ul li.dis a {  color: #AAAAAA !important; }
+
+.mnuBarLi span:after{
+  font-family: FontAwesome;
+  content: " \f0d7";
+}
+/* to change arrow on hover */
+/*.mnuBarDiv ul ul span,.mnuBarDiv ul a:hover table span{background-image:url(./images/arrow_sub2.gif)}*/
+/*.mnuBarDiv ul ul li:hover > a span{  background-image:url(./images/arrow_sub5.gif);}*/
+/* =============================== Top Row Table =============================== */
+.topRowDv {
+  /*border:1px solid yellow;*/
+  float:right;
+  /*margin: 0px 0px 0px 2px;*/
+  margin: 0px;
+  padding: 0px;
+  width:100%;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  height:100%;
+}
+
+.topLtImgDv {
+display:none;
+}
+
+.topLtImgDv img {
+  margin-top: 2px;
+  /*border-top: 1px solid transparent;*/
+  /*border: 0px;*/
+  vertical-align:middle;
+  height:24px;
+  width:96px;
+}
+
+.topMdlDv {
+display:none;
+}
+
+.topOrgDv {
+display:none;
+}
+
+.topRtDv {
+position: absolute;
+right: 0px;
+}
+
+
+/* ================= Top row CSS Menu ================ */
+.topMnuDiv {
+  /*border:1px solid red;*/
+  float:right;
+  margin: 0px;
+}
+
+/* down sub menu right aligned used for drop down under Welcome */
+.topMnuDiv.mnuBarDiv ul ul.subDn{position:absolute;left:inherit;top:99%;right:5px;} 
+
+/* down sub menus position * can be based on direction */
+.topMnuDiv ul ul.subDn { position: absolute;left:-2px;top:98%; }
+
+ /* left sub menus position * can be based on direction */
+.topMnuDiv ul ul.subLt { position: absolute;left:-100%;top:-2px; }
+
+ /* main menu bar*/
+.topMnuDiv ul {
+  /*border:1px solid orange;*/
+  float:right;
+  color:#959595;
+  vertical-align:middle;
+  margin: 0px;
+  padding: 0px;
+  background-color: transparent;
+}
+
+.topMnuDiv>ul>li {
+  height:26px;
+  vertical-align: bottom;
+}
+
+/* sub menus fixed width : can use different width for different level, or with id's*/
+.topMnuDiv ul ul {
+
+}
+
+/* sub menu link*/
+.topMnuDiv ul ul a { white-space:normal; }
+
+.topMnuDiv ul li.subDn span{ background-image:url('../img/arr_dn_blue.gif'); }
+
+/* main menu bar items link - enabled no hover,  disable hover, sep hover*/
+.topMnuDiv ul a,
+.topMnuDiv ul li.dis a:hover,
+.topMnuDiv ul li.sep a:hover,
+.topMnuDiv ul li.sep:hover > a,
+.topMnuDiv ul li.dis:hover > a
+{
+  color: #454545;
+  padding:0 4px 0 4px;
+}
+
+/* sub menu bar items link, - enabled no hover, disable hover, sep hover*/
+.topMnuDiv  ul ul a,
+.topMnuDiv  ul ul li.dis a:hover,
+.topMnuDiv  ul ul li.sep a:hover,
+.topMnuDiv  ul ul li.sep:hover>a,
+.topMnuDiv  ul ul li.dis:hover>a,
+.topMnuDiv  ul li.sep ul li:hover>a,
+.topMnuDiv  ul li.dis ul li:hover>a
+{
+  background-color: transparent;
+  color: #454545;
+  padding:4px;
+}
+
+/* main menu item hover link*/
+.topMnuDiv ul li:hover > a, .topMnuDiv ul li.mnhvr > a {
+  background-color:#FCFCFC;
+  /*text-decoration:underline;*/
+  color: #000000;
+}
+
+/* main menu item link hover*/
+.topMnuDiv ul li a:hover, .topMnuDiv ul>li.mnhvr>a {
+  /*text-decoration:underline;*/
+  color: #000000;
+  /*color:#F17A22;*/
+}
+
+/* sub menu item hover link*/
+.topMnuDiv ul ul li:hover > a {
+  background-color: #e2edfb;
+}
+
+/* sub menu item link hover*/
+.topMnuDiv ul ul li a:hover {
+  background-color: #e2edfb;
+
+  border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -webkit-border-radius: 0 0 4px 4px;
+}
+
+.topMnuDiv ul img {
+  font-family: 'Font Awesome';
+  content: "\25AE";
+  float:left;
+  vertical-align: middle;
+  margin-right:0px;
+  width:24px; height:24px;
+}
+
+.topMnuDiv ul ul img {
+  width:16px; height:16px;
+}
+
+/* main menu disabled item link*/
+.topMnuDiv ul li.dis a { color: #b8b8b8 !important; }
+
+/*.topMnuDiv ul li{ position:relative; }*/
+
+/* ========================= Tab Bar (CSS MEnu) =================================*/
+.tabBar {
+  /*border:1px solid red;*/
+  float:right;
+  width:100%;
+  margin: 0px;
+  vertical-align:middle;
+  background-color: #F4F4F4;
+}
+
+.mnuBarDiv ul ul.subDn { position: absolute;left:0px;top:99%; }
+
+ /* main menu bar*/
+.tabBar ul {
+  list-style-type: none;
+  background-color: #F4F4F4;
+}
+
+/* sub menus fixed width : can use different width for different level, or with id's*/
+.tabBar ul ul {
+  border: 1px solid #1B4860;
+  background-color: #ededed;
+  /*background-color: #AABED8;*/
+  /*width:154px;*/
+  width:160px;
+
+
+  color:#ededed;
+  vertical-align:middle;
+
+  background-image: linear-gradient(bottom, #AABED8, #FCFCFC);
+
+  background-image: -moz-linear-gradient(bottom, #AABED8, #FCFCFC);
+  background-image: -ms-linear-gradient(bottom, #AABED8, #FCFCFC);
+  background-image: -webkit-linear-gradient(bottom, #AABED8, #FCFCFC);
+  background-image: -webkit-gradient(linear,left bottom,left top, from(#AABED8), to(#FCFCFC));
+  background-image: -o-linear-gradient(bottom, #AABED8, #FCFCFC);
+}
+
+ /* main menu bar*/
+.tabBar>ul>li>ul{
+  border-top: 1px solid #ededed;
+}
+
+.tabBar ul a {
+}
+
+/* sub menu link*/
+.tabBar ul ul a { white-space:normal; font-weight: normal; }
+
+/* sub menu bar items link, - enabled no hover, disable hover, sep hover*/
+.tabBar  ul ul a,
+.tabBar  ul ul li.dis a:hover,
+.tabBar  ul ul li.sep a:hover,
+.tabBar  ul ul li.sep:hover>a,
+.tabBar  ul ul li.dis:hover>a,
+.tabBar  ul li.sep ul li:hover>a,
+.tabBar  ul li.dis ul li:hover>a
+{
+  background-color: transparent;
+
+}
+
+/* selected menu bar item */
+.tabBar ul li.sel > a
+{
+}
+
+/* selected menu bar item */
+
+.tabBar li.sel+li.sep,
+.tabBar li:hover+li.sep, .tabBar li.mnhvr+li.sep
+{
+  color: #1B4860;
+}
+
+
+
+.tabBar ul li.subDn.sel span{ background-image:url('../img/arr_dn_blue.gif'); }
+.tabBar ul li.subDn:hover > a > span, .tabBar ul li.subDn.mnhvr > a > span{ background-image:url('../img/arr_dn_blue.gif'); }
+
+/* selected sub menu bar item*/
+.tabBar ul ul li.sel > a
+{
+  /*background-color: #cccccc;*/
+  color:#454545;
+}
+
+/* main menu item hover link*/
+.tabBar ul li:hover > a,  .tabBar ul li.mnhvr > a{
+  /*background-color: #ededed;*/
+  color:#454545;
+  /*color:#F17A22;*/
+  margin: 0px 0px 1px 0px;
+  /*margin-bottom: 0px;*/
+  /*padding-bottom: 5px;*/
+}
+
+/* main menu item link hover*/
+.tabBar ul li a:hover, .tabBar ul>li.mnhvr>a {
+  /*background-color: #AABED8;*/
+}
+
+/* sub menu item hover link*/
+.tabBar ul ul li:hover > a {
+  background-color: #ededed;
+}
+
+/* sub menu item link hover*/
+.tabBar ul ul li a:hover {
+  background-color: #ededed;
+  /*background-color: #e2edfb;*/
+}
+
+/* main menu disabled item link*/
+.tabBar ul li.dis a { color: #737373 !important; }
+
+/*.tabBar ul li { position:relative; }*/
+
+/* =============================== Action Bar (CSS Menu) =============================== */
+.actBar {
+  float:right;
+  /*border:1px solid red;*/
+  width:100%;
+  margin: 0px;
+  vertical-align:middle;
+  /*background-color: #FCFCFC;*/
+  padding-right: 8px;
+}
+ /* main menu bar*/
+.actBar ul {
+  border: 1px solid #1B4860;
+  /*border:1px solid #959595;*/
+  float:right;
+  /*width:100%;*/
+  color:#959595;
+  vertical-align:middle;
+
+  background-color:#AABED8;
+
+  border-radius: 0px 0px 4px 4px;
+  -moz-border-radius: 0px 0px 4px 4px;
+  -webkit-border-radius: 0px 0px 4px 4px;
+}
+
+.actBar > ul {
+  /*height:30px;*/
+}
+/* sub menus fixed width : can use different width for different level, or with id's*/
+.actBar ul ul {
+  background-color: #AABED8;
+  border: 1px solid #1B4860;
+
+  /*border: 1px solid red;*/
+  width: 132px;
+  color:#959595;
+  vertical-align:middle;
+
+  border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -webkit-border-radius: 0 0 4px 4px;
+}
+
+/* sub menu link*/
+.actBar ul ul a {
+  /*background-color: transparent;*/
+  white-space:normal;
+}
+
+/* menu bar items */
+.actBar ul li{
+  margin:1px 4px 1px 4px;
+  /*background-color: #FCFCFC;*/
+  /*border: 1px solid #1B4860;*/
+  /*display:block;*/
+  /*margin-right:0px;*/
+
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  vertical-align: middle;
+}
+
+.actBar > ul > li{
+  /*height:26px;*/
+  /*padding: 4px;*/
+}
+
+.actBar > ul > li > a{
+  /*height:26px;*/
+}
+
+.actBar  ul ul li{
+  /*background-color: transparent;*/
+  /*border-bottom: 1px solid #1B4860;*/
+  margin-left: 2px;
+  /*border: 1px solid red;*/
+  /*float:left;*/
+  vertical-align: middle;
+}
+
+.actBar ul span {
+  overflow:hidden;
+  display:block;
+  background-position:99% center;
+  background-repeat: no-repeat;
+  padding: 0px 8px 0px 0px;
+  /*margin-right: 4px;*/
+  vertical-align:middle;
+
+  /*background-color: #FCFCFC;*/
+  border: 1px solid transparent;
+}
+
+.actBar ul li:hover> a span, .actBar ul li a:hover span,
+.actBar ul li.mnhvr> a span, .actBar ul>li.mhvr>a span {
+  border: 1px solid #1B4860;
+}
+
+.actBar  ul li.subDn span { background-image:url('../img/arr_dn_blue.gif'); }
+.actBar  ul li.subRt span { background-image:url('../img/arr_rt_blue.gif'); }
+.actBar  ul li.subLt span { background-image:url('../img/arr_rt_blue.gif'); }
+
+
+/* main menu bar items link - enabled no hover,  disable hover, sep hover*/
+.actBar ul a,
+.actBar ul li.dis a:hover, .actBar ul li.sep a:hover,
+.actBar ul li.sep:hover>a, .actBar ul li.dis:hover>a
+{
+  display:inline;
+  /*background-color: transparent;*/
+  /*background-color: #AABED8;*/
+  color: #454545;
+  /*text-align:center;*/
+  /*min-height:26px;*/
+  padding:0px;
+  margin: 0px;
+  vertical-align: middle;
+}
+
+/* sub menu bar items link, - enabled no hover, disable hover, sep hover*/
+.actBar  ul ul a,
+.actBar  ul ul li.dis a:hover,
+.actBar  ul ul li.sep a:hover,
+.actBar  ul ul li.sep:hover>a, .actBar  ul ul li.dis:hover>a,
+.actBar  ul li.sep ul li:hover>a, .actBar  ul li.dis ul li:hover>a
+{
+  /*background-color: transparent;*/
+  /*background-color: #cbdff9;*/
+  color: #454545;
+  /*height:16px;*/
+  /*padding:1px;*/
+  /*border: 1px solid red;*/
+  vertical-align: middle;
+}
+
+/* main menu item hover link*/
+.actBar ul li:hover>a, .actBar ul li.mnhvr>a{
+  background-color: #AABED8;
+  /*color:#F17A22;*/
+  /*min-height:26px;*/
+
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  /*height:16px;*/
+}
+
+/* main menu item link hover*/
+.actBar ul li a:hover, .actBar ul>li.mnhvr>a {
+  background-color: #AABED8;
+
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  /*height:16px;*/
+}
+
+.actBar ul img {
+  /*border-top: 1px solid transparent;*/
+  /*border: 1px solid red;*/
+  /*border: none;*/
+  float: none;
+  /*float: left;*/
+  clear:both;
+  _float:none;
+  margin:1px 0 0 0px;
+  width:24px; height:24px;
+  vertical-align: middle;
+}
+
+.actBar ul span img {
+  margin:0px;
+}
+.actBar ul ul img {
+  margin-right:4px;
+}
+/* main menu disabled item link*/
+.actBar ul li.dis a { color: #777777 !important; }
+
+.actBar a img:hover {
+  border: 1px solid #F17A22;
+}
+/*.actBar ul ul.subDn{position: absolute;left:0px;top:100%;}  down sub menus position * can be based on direction*/
+.actBar ul ul.subDn{position: absolute;left:-98px;top:99%;}  /* down sub menus position * can be based on direction*/
+
+/* =============================== Line Action Bar (CSS Menu) =============================== */
+.lineActIconBar {
+  float:left;
+  /*border:1px solid red;*/
+  width:45px;
+  margin: 0px;
+  vertical-align:middle;
+  /*background-color: #FCFCFC;*/
+  padding-left: 8px;
+}
+ /* main menu bar*/
+.lineActIconBar ul {
+  float:right;
+  /*width:100%;*/
+  color:#959595;
+  vertical-align:middle;
+  background-color:transparent;
+
+  border-radius: 0px 0px 4px 4px;
+  -moz-border-radius: 0px 0px 4px 4px;
+  -webkit-border-radius: 0px 0px 4px 4px;
+}
+
+.lineActIconBar > ul {
+  /*height:30px;*/
+}
+/* sub menus fixed width : can use different width for different level, or with id's*/
+.lineActIconBar ul ul {
+  background-color: #AABED8;
+  border: 1px solid #1B4860;
+
+  /*border: 1px solid red;*/
+  width: 255px;
+  color:#959595;
+  vertical-align:middle;
+
+  border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -webkit-border-radius: 0 0 4px 4px;
+}
+
+/* sub menu link*/
+.lineActIconBar ul ul a {
+  /*background-color: transparent;*/
+  white-space:normal;
+}
+
+/* menu bar items */
+.lineActIconBar ul li{
+  margin:1px 4px 1px 4px;
+  /*background-color: #FCFCFC;*/
+  /*border: 1px solid #1B4860;*/
+  /*display:block;*/
+  /*margin-right:0px;*/
+
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  vertical-align: middle;
+}
+
+.lineActIconBar > ul > li{
+  /*height:26px;*/
+  /*padding: 4px;*/
+}
+
+.lineActIconBar > ul > li > a{
+  /*height:26px;*/
+}
+
+.lineActIconBar  ul ul li{
+  /*background-color: transparent;*/
+  /*border-bottom: 1px solid #1B4860;*/
+  margin-left: 2px;
+  /*border: 1px solid red;*/
+  /*float:left;*/
+  vertical-align: middle;
+}
+
+.lineActIconBar ul span {
+  overflow:hidden;
+  display:block;
+  background-position:99% center;
+  background-repeat: no-repeat;
+  padding: 0px 8px 0px 0px;
+  /*margin-right: 4px;*/
+  vertical-align:middle;
+
+  /*background-color: #FCFCFC;*/
+  border: 1px solid transparent;
+}
+
+.lineActIconBar ul li:hover> a span, .lineActIconBar ul li a:hover span,
+.lineActIconBar ul li.mnhvr> a span, .lineActIconBar ul>li.mhvr>a span {
+  border: 1px solid #1B4860;
+}
+
+.lineActIconBar  ul li.subDn span { background-image:url('../img/arr_dn_blue.gif'); }
+.lineActIconBar  ul li.subRt span { background-image:url('../img/arr_rt_blue.gif'); }
+.actBar  ul li.subLt span { background-image:url('../img/arr_rt_blue.gif'); }
+
+
+/* main menu bar items link - enabled no hover,  disable hover, sep hover*/
+.lineActIconBar ul a,
+.lineActIconBar ul li.dis a:hover, .lineActIconBar ul li.sep a:hover,
+.lineActIconBar ul li.sep:hover>a, .lineActIconBar ul li.dis:hover>a
+{
+  display:inline;
+  /*background-color: transparent;*/
+  /*background-color: #AABED8;*/
+  color: #454545;
+  /*text-align:center;*/
+  /*min-height:26px;*/
+  padding:0px;
+  margin: 0px;
+  vertical-align: middle;
+}
+
+/* sub menu bar items link, - enabled no hover, disable hover, sep hover*/
+.lineActIconBar  ul ul a,
+.lineActIconBar  ul ul li.dis a:hover,
+.lineActIconBar  ul ul li.sep a:hover,
+.lineActIconBar  ul ul li.sep:hover>a, .lineActIconBar  ul ul li.dis:hover>a,
+.lineActIconBar  ul li.sep ul li:hover>a, .lineActIconBar  ul li.dis ul li:hover>a
+{
+  /*background-color: transparent;*/
+  /*background-color: #cbdff9;*/
+  color: #454545;
+  /*height:16px;*/
+  /*padding:1px;*/
+  /*border: 1px solid red;*/
+  vertical-align: middle;
+}
+
+/* main menu item hover link*/
+.lineActIconBar ul li:hover>a, .lineActIconBar ul li.mnhvr>a{
+  background-color: #AABED8;
+  /*color:#F17A22;*/
+  /*min-height:26px;*/
+
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  /*height:16px;*/
+}
+
+/* main menu item link hover*/
+.lineActIconBar ul li a:hover, .lineActIconBar ul>li.mnhvr>a {
+  background-color: #AABED8;
+
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  /*height:16px;*/
+}
+
+.lineActIconBar ul img {
+  /*border-top: 1px solid transparent;*/
+  /*border: 1px solid red;*/
+  /*border: none;*/
+  float: none;
+  /*float: left;*/
+  clear:both;
+  _float:none;
+  margin:1px 0 0 0px;
+  width:16px; height:16px;
+  vertical-align: middle;
+}
+
+.lineActIconBar ul span img {
+  margin:0px;
+}
+.lineActIconBar ul ul img {
+  margin-right:4px;
+}
+/* main menu disabled item link*/
+.lineActIconBar ul li.dis a { color: #777777 !important; }
+
+.lineActIconBar a img:hover {
+  border: 1px solid #F17A22;
+}
+.lineActIconBar ul ul.subDn{position: absolute;top:99%;}  /* down sub menus position * can be based on direction*/
+/*  =============================== SearchFilter table style =============================== */
+
+.sfData {
+  float:left;
+  margin:  0px;
+}
+
+.sfTable {
+  border-collapse:collapse;
+
+  padding:0px;
+  /*margin-left:auto;*/
+  margin-right:auto;
+  color:#454545;
+  /*background-color: #ededed;*/
+  background-color: #c1c1c1;
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  /*border:1px solid #808080;*/
+}
+
+.sfRow { padding:0px; }
+
+.sfCell { }
+
+.sfSubTable {
+  border:0px;
+  border-collapse:collapse;
+  padding:0px;
+  margin: 0px;
+  width:100%;
+  background-color: #ededed;
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+}
+
+.sfSubRow { }
+
+.sfSubCell {
+  color:#454545;
+  /*border: 1px solid red;*/
+  padding: 2px 2px 2px 2px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.sbSep {
+  float:left;
+  padding: 2px 2px 2px 2px;
+  /*font-weight: bold;*/
+  vertical-align: middle;
+}
+
+.sfItemTable {
+  padding:0px;
+  border-collapse:collapse;
+}
+
+.sfItemCell {
+  color: #454545;
+  vertical-align:middle;
+  white-space: nowrap;
+  padding: 1px 2px 1px 2px;
+  /*border: 1px solid red;*/
+}
+
+.sfSubCell a:link, .sfItemCell a:link {
+  color: #454545;
+  /*text-decoration: none;*/
+}
+
+/*.sfSubCell a>div, .sfItemCell a>div {*/
+  /*white-space: nowrap;*/
+  /*width:100%;*/
+/*}*/
+
+.sfSubCell a:hover, .sfSubCell a:hover div,
+.sfItemCell a:hover, .sfItemCell a:hover div
+{
+  text-decoration: underline;
+}
+
+/*  =============================== InfoBox table style =============================== */
+.ibMTable {
+  width:100%;
+  border: none;
+  border-collapse: collapse;
+}
+
+.ibTable a img {
+  vertical-align:middle;
+  margin: 0px;
+  padding: 0px;
+}
+
+.ibTCell {
+  color: #1B4860; /* #556666 colorBatchHeader */
+  font-family:Verdana, Arial;
+  font-size:14px;  /* size=2 */
+  font-weight:bold;
+  text-align:left;
+}
+
+
+.ibCCell, .opn {
+  padding:0 0 0 0;
+  width:8px; height:16px;
+}
+
+div.ibCCell, div.opn {
+  /*border: 1px solid red;*/
+  overflow:hidden;
+  /*float:left;*/
+  /*width:12px;*/
+  display:block;
+  background-position:left center;
+  background-repeat: no-repeat;
+}
+
+div.ibCCell { background-image:url('../img/arr_dn_blue.gif'); }
+div.opn { background-image:url('../img/arr_rt_blue.gif'); }
+
+
+.ibWarnTtl {
+  color:#FF0000;  /* red */
+  font-size:14px; /* size=2 */
+  font-weight:bold;
+}
+
+.ibBarRow {
+  background-color: #F17A22;
+  height:1px;
+}
+
+.ibBarRow td {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.ibCol {
+  /*border: 1px solid green;*/
+  vertical-align: top;
+  /*width:1%;*/
+  /*padding: 0px;*/
+}
+
+.ibTable {
+  /*width:100%;*/
+  /*border: 1px solid red;*/
+}
+
+.ibHdrCell {
+  border:0px;
+  margin:1px;
+  padding:2px;
+  white-space: nowrap;
+  /*font-size:10px;*/
+  text-align:right;
+  /*color:#FCFCFC;*/
+  background-color: #ededed;  /* #BED9F5 colorBatchRowOdd    d8dfea  c4cde0 #637bad - tab color*/
+}
+
+.ibDataCell {
+  border:0px;
+  margin:1px;
+  padding:2px;
+  /*font-size:10px;*/
+  text-align:left;
+  /*vertical-align:top;*/
+  vertical-align: middle;
+  background-color: #FCFCFC; /* #FCFCFC colorBatchRowEven eef2f7*/
+}
+
+.ibCol.ibDataCell {   vertical-align: top; }
+
+
+.ibTableB { border-collapse:collapse; }
+.ibHdrCellB {
+  border:1px solid #FCFCFC;   /* #556666 colorBatchHeader */
+  margin:0px;
+  white-space: nowrap;
+}
+.ibDataCellB {
+  border:1px solid #ededed;  /* #556666 colorBatchHeader */
+  margin:0px;
+}
+
+/*
+.ibDataCell:hover { background-color:#FFFF66; }
+.ibDataCellB:hover { background-color: #ffff99; }
+*/
+
+/*  =============================== BatchedSection table style =============================== */
+/* .highlight { background-color:#FFCC33; * sticky # *ffff66 *} */
+
+.bsData {
+  /*position:absolute;*/
+  /*border:1px solid orange;*/
+  float:left;
+  margin: 0px 0px 0px 0px;
+  width:100%;
+}
+
+.bsInfoDv {
+  border:1px solid #c1c1c1;
+  border-collapse:collapse;
+  float:right;
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  /*#AABED8;*/
+  /*background-color: #AABED8;*/
+  background-color: #ededed;
+  /*width:100%;*/
+  padding: 0px 2px 0px 2px;
+}
+
+.bsInfoDvR {
+  float:right;
+  right:0px;
+  vertical-align: middle;
+  white-space: nowrap;
+  padding: 0 16px 0 4px;
+}
+
+.bsInfoT {
+  /*border:1px solid #1B4860;*/
+  /*border:1px solid red;*/
+  border-collapse:collapse;
+  height:26px;
+  /*width:50%;*/
+  /*align=left */
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+  vertical-align: middle;
+}
+
+.bsInfoR {
+}
+
+.bsInfoC {
+  color:#454545;
+  /*border:1px solid green;*/
+  vertical-align: middle;
+  padding: 2px;
+  white-space: nowrap;
+}
+
+.bsInfoC a:link, .bsInfoC a:visited {
+  /*border: 1px solid yellow;*/
+  color:#454545;
+  /*text-decoration: underline;*/
+  cursor:pointer;
+}
+
+.bsInfoC a:hover,  .bsInfoC a:hover div {
+  text-decoration: underline;
+}
+
+.bsT {
+  border-collapse:collapse;
+  border:1px solid #c1c1c1;
+}
+
+.bsHR {
+  background-color: #D1ECF6;
+  border-top: 1px solid #18A2D2;
+  border-bottom: 1px solid #18A2D2;
+  padding: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.bsFR {
+  background-color:#AABED8; /*ColorBatchHeader #556666*/
+  border:1px solid #c1c1c1; /*ColorTableBG #999999*/
+}
+
+.bsHTC {
+  background-color: #D1ECF6;
+  border-top: 1px solid #18A2D2;
+  border-bottom: 1px solid #18A2D2;
+  padding: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.bsHTC a:link {
+  color:#454545;
+  text-decoration:underline;
+}
+
+.bsHTC a:hover {
+  color:#1c5298;
+}
+
+.bsFTC {
+  border:1px solid #a1a1a1; /*ColorTableBG #999999*/
+  padding:2px;
+  text-align:right;
+  font-weight:bold;
+  color:#454545;
+}
+
+.bsFTDC {
+  border:1px solid #a1a1a1; /*ColorTableBG #999999*/
+  padding:2px;
+  text-align:right;
+  font-weight:bold;
+  color:#454545;
+}
+
+.bsFTDC a {  color:#1C5298; }
+.bsHTC a {  color:#1C5298; }
+.bsFTC a {  color:#1C5298; }
+
+.bsDRE {
+  border-bottom: 1px solid #CCCCCC;
+}
+.bsDRE:hover { background-color: #fffebc; }
+
+.bsDRO {
+  border-bottom: 1px solid #CCCCCC;
+}
+.bsDRO:hover { background-color: #fffebc; }
+
+.bsDRH {
+  background-color: #E6C88B;  /* #BED9F5 colorBatchRowOdd    d8dfea  c4cde0 #637bad - tab color*/
+  border:1px solid #c1c1c1; /*ColorTableBG #999999*/
+}
+.bsDRH:hover { background-color: #fffebc; }
+
+.bsDTCE a {  
+  color:#1C5298;   
+  vertical-align: middle;
+  font-family: 'FontAwesome';
+  content: "&#xf062";
+  font-size: 16px;
+}
+.bsDTCE a img {
+  width: 20px;
+}
+.liActBxC a:first-child:before {  
+   font-family: FontAwesome;
+   content: "\f080";
+   padding: 10px;
+}
+
+.bsDTCO a {  color:#1C5298;   vertical-align: middle; }
+
+.bsDTCE {
+
+}
+.bsDTCO {
+  padding:2px;
+  color:#454545;
+  text-align: left;
+}
+
+/*  =============================== BatchedSection Sub table style =============================== */
+
+.bssT {
+  border-collapse:collapse;
+  width:95%;
+}
+
+.bssHR { background-color: #c9c9c9; /*colorSubTableHeader #E7E7E7*/ }
+
+.bssHTC {
+  color:#000000;
+  border:1px solid #b1b1b1; /*ColorTableBG #999999*/
+  padding:2px;
+  text-align:center;
+}
+
+.bssDR { background-color: transparent; }
+/*#dedede; *//* #FCFCFC ColorSubTableBG FCFCFC*/ 
+
+.bssDTC {
+  border:1px solid #b1b1b1; /*ColorTableBG #999999*/
+  padding:2px;
+  color:#000000;
+  vertical-align: middle;
+}
+
+/*  ======================== BatchedSection Outside sub table style ========================== */
+
+.bsoT { border-collapse:collapse; }
+
+.bsoHR { /* background-color:#FCFCFC; ColorBatchHeader #556666*/ }
+
+.bsoHTC {
+  border:0px solid #27395e; /*ColorTableBG #999999*/
+  padding:2px;
+}
+
+.bsoDR { background-color: #FCFCFC;  /* #BED9F5 colorBatchRowOdd    d8dfea  c4cde0 #637bad - tab color*/ }
+
+.bsoDTC {
+  border:0px solid #27395e; /*ColorTableBG #999999*/
+  padding:2px;
+  vertical-align: middle;
+}
+
+
+.lgndT { width:100%; text-align: left; border: 0px; }
+.lgndR { border: 0px; }
+
+.lgndC {
+  border: 0px;
+  margin:  2px;
+  padding: 0px;
+  vertical-align: middle;
+  font-size: 9px;
+}
+
+/* =============================== Popup Header Sectin Style =============================== */
+.pHdrT { border:0px; padding: 0px; margin:0px; width:100%;}
+.pHdrTR {
+  background-color: #1B4860;
+  border:0px;
+}
+.pHdrTC {
+  color:#ededed; /*colorPopupBannerText #FCFCFC*/
+  border:0px;
+  font-size:14px; /*size=4 or 2 */
+  font-weight: bold;
+  vertical-align: middle;
+  /*height: 30px;*/
+  width: 100%;
+  text-align: center;
+}
+
+
+/* search table in pop ups */
+.psOfT {
+  width: 100%;
+}
+.psOfTC {
+  text-align:center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.psfDv {
+  /*float:left;*/
+  border: 1px solid #C1C1C1;
+  background-color: #EBEBEB;
+  /*width: 100%;*/
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+
+}
+
+.psfT {
+  border: 0px solid #1C5298;
+  border-collapse: collapse;
+  /*background-color: #EBEBEB;*/
+  /*width: 100%;*/
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.psfTR {
+}
+
+.psfTC {
+  text-align:center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.psfHTC { text-align:center; }
+
+/* search table instructions in pop ups */
+.psfITC { text-align:center; }
+
+/* =============================== Footer Sectin Style =============================== */
+
+.ftrT { border: 0px; border-collapse: collapse; width:100%; margin:0px; padding:0px;}
+.ftrTR { background-color:#1b4860; /*ColorBatchHeader #556666*/ border:0px;}
+.pFtrTR { background-color:#1b4860; /*ColorBatchHeader #556666*/ border:0px;}
+
+.ftrTC {
+  border: 0px;
+  color:#ededed; /* #FCFCFC colorFooterBannerText */
+  font-size:11px;  /* size=2 */
+  font-weight: bold;
+  text-align: left;
+  padding:1px;
+  padding-left:25px;
+  width:33%; 
+}
+.ftrTCs {
+  border: 0px;
+  color:#ededed; /* #FCFCFC colorFooterBannerText */
+  /*font-size:10px;  *//* size=1 */
+  font-weight: bold;
+  text-align: right;
+  padding:1px;
+  padding-right:25px;
+  width:33%; 
+}
+td.ftrTC + td.ftrTCs {
+  text-align: center;
+}
+.ftrTCs a {text-decoration:none;color:#ededed;}
+.ftrTCs a:hover {text-decoration:underline;}
+
+/*  =============================== Copyright table style =============================== */
+.cprR { background-color:#FCFCFC; /*BodyBGColor #FCFCFC*/ border:0px;}
+.cprC { text-align: center; border:0px solid red; padding: 1px; color:#000000;
+    font-size:9px;  /*size=1 */}
+.cprC a  {text-decoration:none;color:#000000;font-weight: normal;}
+
+
+/*  =============================== JS Menu <start>=============================== */
+/*
+
+menuStyle=jMnu
+scrollMainDivStyle=jMnuSMDv
+scrollDivStyle=jMnuSDv
+menuTxtStyle=jMnuTxt
+menuImgStyle=jMnuImg
+menuSMStyle=jMnuSM
+menuEmptyStyle=jMnuEmpt
+separatorStyle=jMnuSep
+
+*/
+
+/*#Type_PDLink {*/
+  /*border:  1px solid green;*/
+  /*float:left;*/
+  /*clear:right;*/
+/*}*/
+/* Menu open text div */
+.mOTxtDv {
+  float:left;
+}
+
+/*.clear {*/
+ /*clear:both;*/
+/*}*/
+/* Menu open image div */
+.mOImgDv {
+  float:left;
+  clear:right;
+  margin:  4px 0 0 4px;
+  width: 0; height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #1C5298;
+}
+
+/*.sfItemCell {*/
+  /*white-space: nowrap;*/
+/*}*/
+
+/* JS Menu styles */
+.jMnu {
+  border-collapse:collapse;
+  position:relative; cursor:default; background-color:#FCFCFC; /* menuBGColor */
+  border-top: 1px solid #80A3BD; /* menuBorderColor */
+  border-left: 1px solid #80A3BD; /* menuBorderColor */
+  border-bottom: 1px solid #80A3BD; /* menuBorderColor */
+  border-right: 1px solid #80A3BD; /* menuBorderColor */
+  visibility: inherit;
+  padding:0px;
+  margin:0px;
+}
+
+.jMnuSMDv {
+  position:relative; cursor:default;
+  background-color:#FCFCFC; /* menuBGColor */
+}
+
+.jMnuSDv {
+  position:relative; cursor:default;
+  width:50%;
+  background-color:#FCFCFC; /* menuBGColor */
+  border-top: 1px solid #80A3BD; /* menuBorderColor */
+  border-left: 1px solid #80A3BD; /* menuBorderColor */
+  border-bottom: 1px solid #80A3BD; /* menuBorderColor */
+  border-right: 1px solid #80A3BD; /* menuBorderColor */
+}
+
+.jMnuSDv1 {
+  position: absolute;
+  top: 0px;
+  cursor:default;
+  width:50%;
+  left: 50%;
+  background-color:#FCFCFC; /* menuBGColor */
+  border-top: 1px solid #80A3BD; /* menuBorderColor */
+  border-left: 1px solid #80A3BD; /* menuBorderColor */
+  border-bottom: 1px solid #80A3BD; /* menuBorderColor */
+  border-right: 1px solid #80A3BD; /* menuBorderColor */
+}
+
+/* the style for the center text column */
+.jMnuTxt {
+  padding-top:1px; padding-left:5px;padding-right:5px; padding-bottom:1px;
+  text-decoration:none;
+  text-align:left;
+}
+
+.jMnuTxtNS { color:#000000;   background-color:#FCFCFC;/* menuTxtColor, menuBGColor */ }
+.jMnuTxtDNS { color:#C2C2C2;  background-color:#FCFCFC; /* menuTxtColor, menuBGColor */ }
+.jMnuTxtDS { color:#C2C2C2;   background-color:#80A3BD;/* menuTxtDisabledColor, menuBGColor */ }
+.jMnuTxtS { color: #ff5500; background-color:#80A3BD;  /* menuTxtSelColor, menuBGSelColor */ }
+
+/* the style for the leftmost icon column */
+.jMnuImg {
+  cursor:default;
+  padding-left:1px; padding-right:1px; padding-bottom:1px; padding-top:1px; border: 0px;
+  text-align:center;
+}
+
+.jMnuImgNS { background-color:#A5C5DE; /* menuImgBGColor */ }
+.jMnuImgS { background-color:#80A3BD; /* menuBGSelColor */ }
+
+/* the style for the rightmost rollout submenu arrow column */
+.jMnuSM { cursor:default; background-color:#FCFCFC; /* menuBGColor */}
+.jMnuSMS { cursor:default;  background-color:#80A3BD; /* menuBGSelColor */ }
+
+/* the style used when no images exist ( for  nbsp; ) */
+.jMnuEmpt {  /* menuFontFamily */ }
+
+.jMnuSep { border-bottom:1px solid #A5C5DE; /*  borderLine */ /* menuSeparatorColor */ }
+
+/*  =============================== JS Menu <end>=============================== */
+
+.arUpDv {
+  width: 0;  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid #FCFCFC;
+}
+
+.arDnDv {
+  width: 0; height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #FCFCFC;
+}
+
+.arRtDv {
+  width: 0; height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid #FCFCFC;
+}
+
+.arLtDv {
+  width: 0; height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-right:4px solid #FCFCFC;
+}
+
+.srtDnDv {
+  vertical-align: middle;
+  display:block;
+  float:right;
+  width: 0px; height:0px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #1B4860;
+}
+
+.srtUpDv {
+  vertical-align: middle;
+  display:block;
+  float:right;
+  width: 0px; height:0px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #1B4860;
+}
+
+/** ============================= PDF Email ============================= */
+.pdfEmailBody {
+  margin:  0px;
+  padding: 2px 2px 2px 2px;
+}
+
+.pdfEmailHeader {
+  background-color: #FCFCFC;
+  width: 100%;
+}
+
+.pdfEmailLogo { }
+
+.pdfEmailPageName {
+  font-weight:bold;
+  font-size:14px;
+  color:#000000;
+  vertical-align: middle;
+}
+
+.pdfEmailUserName {
+  font-size:10px;
+  color:#000000;
+  vertical-align: middle;
+}
+
+.pdfEmailGenDate {
+  font-size:7px;
+  color:#000000;
+  text-align: right;
+  vertical-align: middle;
+}
+
+/* End PDF email CSS */
+
+/** ============================= HTML Email ============================= */
+.htmlEmailBody {
+  margin:  0px;
+  padding: 2px 5px 2px 5px;
+}
+
+.htmlEmailHeader {
+  width:100%;
+}
+
+.htmlEmailGenDate {
+  font-size:10px;
+  color:#000000;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.htmlEmailPageName {
+  font-weight:bold;
+  font-size:14px;
+  color:#000000;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* End HTML email CSS */
+
+.tdDataWidth {
+  width:100%;
+}
+
+/*  =============================== Summary table style =============================== */
+
+.chTable {
+  border-collapse:collapse;
+  background-color: #FCFCFC;
+  border:0px solid transparent;
+  width: 100%;
+  padding: 0px;
+}
+
+.chTitleBTable {
+  border-collapse:collapse;
+}
+.chTitleBRow {
+  background-color: #F17A22;
+}
+.chTitleBCell {
+}
+
+.sTable {
+  border-collapse:collapse;
+  background-color: #FCFCFC;
+}
+
+.stRow { 
+  text-align: left; /* Need this for IE otherwise title is centered. Chrome works fine without */
+}
+
+.stCell { 
+}
+
+.stSubTable { 
+  width: 100%;
+  background-color: #1B4860;/*ColorTableBG #999999*/
+  border-collapse:collapse;
+  /*border:1px solid #c1c1c1;*/
+}
+
+.stSubHdrRow { 
+  background-color:#AABED8; /*ColorBatchHeader #556666*/
+  /*border:1px solid #a1a1a1;  */
+}
+
+.stSubHdrCell { 
+  text-align:center;
+  color:#454545;
+  border:1px solid #a1a1a1; /*ColorTableBG #999999*/
+}
+
+/* sub table Data Row - Even indices */
+.stSubDRE { 
+  background-color: #FCFCFC;
+  /*border:1px solid #c1c1c1; */
+}
+
+/* sub table Data Row - Odd indices */
+.stSubDRO { 
+  background-color: #EEEEEE;
+  /*border:1px solid #c1c1c1; */
+}
+
+/* sub table Data Cell - Even indices */
+.stSubDCE { 
+  border:1px solid #c1c1c1; /*ColorTableBG #999999*/
+}
+
+/* sub tabe Data Cell - Even indices no right border */
+.stSubDCENoRBorder {
+  border:1px; border-right-width:0px solid #c1c1c1; /*ColorTableBG #999999*/
+}
+
+/* sub tabe Data Cell - Even indices no left border */
+.stSubDCENoLBorder {
+  border:1px; border-left-width:0px solid #c1c1c1; /*ColorTableBG #999999*/
+}
+
+/* sub table Data Cell - Odd indices */
+.stSubDCO { 
+  border:1px solid #c1c1c1; /*ColorTableBG #999999*/
+}
+
+/* sub table Data Cell - Odd indices no right border */
+.stSubDCONoRBorder { 
+  border:1px; border-right-width:0px solid #c1c1c1; /*ColorTableBG #999999*/
+}
+
+/* sub table Data Cell - Odd indices no left border */
+.stSubDCONoLBorder { 
+  border:1px; border-left-width:0px solid #c1c1c1; /*ColorTableBG #999999*/
+}
+
+.stTitleTable {
+  border-collapse:collapse;
+}
+
+.stTitleRow {
+  color: #1B4860; /* #556666 colorBatchHeader */
+  font-size:14px;
+  font-weight:bold;
+}
+
+.stTitleCell {
+  text-align:left;
+}
+
+.stSubDRO:hover { background-color: #fffbd9; }
+.stSubDRE:hover { background-color: #fffbd9; }
+
+.chTable .stTitleCell {
+  height: 22px;
+}
+
+
+/* End Summary table CSS */
+
+/*  =============================== Mini batcher table style =============================== */
+
+.mbTable { /* main mini batcher table */
+  border-collapse:collapse;
+  background-color: #FCFCFC; /*ColorSubTableBG*/
+  width: 600px;
+}
+
+.mboTable { /* outer table when the Add row link is present */
+}
+
+.mboRow { /* row in the outer table */
+}
+
+.mboAddCell { /* the cell in the outer table holding the add row link */
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.mboMB { /* the cell in the outer table holding the mini batcher  */
+}
+
+.bssMBDTCE { /* even row */
+  /* style for mini batcher when it is in its own table in the batcher */
+  /* useful in the steps component in quote and contract detail */
+  background-color: transparent;
+}
+
+.bssMBDTCO { /* odd row */
+  /* style for mini batcher when it is in its own table in the batcher */
+  /* useful in the steps component in quote and contract detail */
+  background-color: transparent;
+}
+
+.mbTable td.bsHTC { /* header row in main mini batcher table */
+}
+
+.mbTable td.bsDTCO { /* odd data row in main mini batcher table */
+}
+
+.mbTable td.bsDTCE { /* even data row in main mini batcher table */
+}
+
+.mbTable .bsFTC {
+  text-align: left;
+}
+
+/* End Mini batcher table CSS */
+
+/*  =============================== Catalog specific style =============================== */
+.csfNoteH { /* Note cell header - product family right now */
+  text-align: left;
+}
+.csfNoteC {
+  color:#454545;
+  vertical-align: top;
+  font-size: 7pt;
+  font-weight: bold;
+  width: 25%;
+  text-align: left;
+}
+
+.csfOutlineT {
+  border-collapse:collapse;
+  border:1px solid #808080;
+}
+
+.csfAttT {
+  width: 550px;
+}
+
+.csfAttT .sfSubCell {
+  text-align: center;
+}
+
+/* End Catalog specific style */
+
+/*  =============================== Sched HC style =============================== */
+
+.schT {
+  border-collapse:collapse;
+  background-color: #FCFCFC;
+  width: 90%;
+}
+
+.schHR { 
+ background-color: #c0c0c9; 
+}
+
+.schHC { 
+  border:1px solid #b1b1b1;
+  text-align: center;
+}
+
+.schDRE { 
+}
+.schDRO { 
+}
+.schDCE { 
+  border:1px solid #b1b1b1;
+}
+.schDCO { 
+  border:1px solid #b1b1b1;
+}
+
+.schFR {
+  background-color: #c0c0c9; 
+  /*background-color:#AABED8; */
+}
+.schFC {
+  border:1px solid #b1b1b1;
+  padding:2px;
+  text-align:right;
+  color:#454545;
+}
+
+.schFDC {
+  border:1px solid #b1b1b1;
+  padding:2px;
+  text-align:right;
+  color:#454545;
+}
+
+.schSubTable { 
+  width: 100%;
+  background-color: #1B4860;
+  border-collapse:collapse;
+  /*border:1px solid #1B4860;*/
+}
+
+.schSubHdrRow { 
+  background-color:#AABED8; 
+  /*border:1px solid #1B4860;  */
+}
+
+.schSubHdrCell { 
+  text-align:center;
+  color:#454545;
+  border:1px solid #b1b1b1;
+}
+
+/* sub table Data Row - Even indices */
+.schSubDRE { 
+  background-color: #FCFCFC;
+  /*border:1px solid #c1c1c1; */
+}
+
+/* sub table Data Row - Odd indices */
+.schSubDRO { 
+  background-color: #EEEEEE;
+  /*border:1px solid #c1c1c1;*/
+}
+
+/* sub table Data Cell - Even indices */
+.schSubDCE { 
+  border:1px solid #c1c1c1;
+  text-align:left;
+}
+
+/* sub table Data Cell - Odd indices */
+.schSubDCO { 
+  border:1px solid #c1c1c1;
+  text-align:left;
+}
+
+.schSubDRO:hover { background-color: #fffbd9; }
+.schSubDRE:hover { background-color: #fffbd9; }
+
+.schDRE .dtBxC {
+  white-space: nowrap;
+}
+
+.schDRO .dtBxC {
+  white-space: nowrap;
+}
+
+.schFR .JSLn {
+  /* need to align Expand All etc links in the footer */
+}
+
+/* End Schedule HC specific style */
+
+/*  =============================== Calendar style =============================== */
+
+.calHT { /* calendar navigation header table */
+  width: 100%;
+  background-color: #ededed; 
+  border-top: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  margin: 5px 0px 0px 0px;
+}
+
+.calHR { /* calendar navigation row */
+  border: 1px solid red;
+}
+
+.calHC { /* calendar navigation cell */
+  text-align: center;
+}
+
+.calDT { /* calendar days table */
+  background-color: #FCFCFC;
+  border-collapse: collapse;
+  margin: 10px 10px 10px 10px;
+}
+
+.calDR { /* calendar days row */
+}
+
+.calDC { /* calendar days cell */
+  width: 14%;
+  font-size: 11px;
+  text-align: center;
+}
+
+.calDCS { /* calendar days cell - today's date */
+  color: red;
+  font-size: 11px;
+  text-align: center;
+}
+
+.calDC a:link {
+  color:black;
+}
+
+.calDCS a:link {
+  color:red;
+}
+
+
+.calSubDT { /* calendar week days sub table */
+  background-color: #FCFCFC;
+}
+
+.calSubDR { /* calendar week days sub row */
+  color: #454545;
+}
+
+.calSubDC { /* calendar week days sub row */
+  width: 14%;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.calSubDRLine { /* calendar week days sub row line */
+  background-color: #454545;
+}
+
+.calBody {
+  margin:  0px;
+  padding: 0 0 0 0;
+}
+/* ============================= End of calendar style ========================*/
+
+
+/* =========== Dual select box properties table ===== */
+.dbT img {
+  border: 1px solid #b1b1b1;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+.dbT a img:hover {
+  box-shadow: 0 0 4px 2px rgba(0,0,0,0.3) inset;
+  border: 1px solid #F17A22;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+
+
+.dsbT { }
+.dsbTlR { }
+.dsbTlC { }
+.dsbDR { }
+
+.dsbHC {
+  border:0px;
+  margin:1px;
+  padding:2px;
+  white-space: nowrap;
+  text-align:right;
+  background-color: #ededed;
+  vertical-align: middle;
+}
+
+.dsbDC {
+  border:0px;
+  margin:1px;
+  padding:2px;
+  text-align:left;
+  vertical-align: middle;
+  background-color: #FCFCFC;
+  white-space: nowrap;
+}
+/* =========== End of Dual select box properties table ===== */
+
+/* ============================= Link table style ========================*/
+
+/* Style for Link Table with descriptions - e.g. SysAdmin summary, config admin */
+
+.linkT {
+  font-size:14px;
+  margin-left: 80px;
+  margin-top: 10px;
+  border-collapse:collapse;
+}
+
+.ltRow {
+}
+
+.ltCell {
+  text-align: left;
+  padding: 16px 80px 0px 0px;
+}
+
+.ltCell a {
+  font-size:16px;
+}
+
+.ltDCell {
+  padding-top: 16px;
+}
+
+
+/* ============================= End of link table style ========================*/
+
+
+/* ============================= Reconcile detail page ========================*/
+.rdT {
+  padding : 2px;
+  margin: 1px;
+  width: 90%;
+  border: 0px solid transparent;
+}
+
+.rdTHR { }
+.rdTHHC { }
+
+.rdTHC {
+  background-color:#AABED8;
+  text-align: left;
+  color:#454545;
+  font-size:11px;
+  vertical-align: middle;
+  padding : 4px;
+}
+
+.rdTDR { }
+
+.rdTDHC {
+  background-color:#AABED8;
+  text-align: right;
+  color:#454545;
+  font-size:11px;
+  vertical-align: middle;
+  height:2px;
+  width:160px;
+  padding : 2px;
+}
+
+.rdTDHC.strBxC { text-align: right; }
+
+.rdTDC {
+  padding : 2px;
+  border-bottom: 1px solid #ededed;
+  text-align: left;
+}
+
+.rdTSC { }
+
+.rdTR { }
+
+.rdTC {
+  color: #1B4860; /* #556666 colorBatchHeader */
+  font-size:14px;
+  font-weight:bold;
+  text-align:left;
+  vertical-align: top;
+}
+
+.rdTBC {
+  background-color: #F17A22;
+  padding: 0px;
+  height:2px;
+}
+
+
+/* ============================= End of Reconcile detail page ========================*/
+
+/* ========================== Widget Panel (HomePage panels) ==== */
+.wdgTbl {
+  border-collapse: collapse;
+  /*border: 1px solid #c1c1c1;*/
+  padding: 0px;
+  width: 100%;
+  vertical-align: top;
+  height: 100%;
+}
+
+.wdgTHR {
+  padding: 0px;
+}
+
+.wdgHC {
+  padding: 0px;
+  vertical-align: top;
+  height:24px;
+}
+
+.wdgTDR {
+  padding: 0px;
+}
+
+.wdgDC {
+  padding: 2px 0 0 0;
+  vertical-align: top;
+  height:100%;
+}
+
+.wdgTtlTbl {
+  border-collapse: collapse;
+  /*border: 1px solid #bebebe;*/
+  width: 100%;
+  padding: 0px;
+}
+.wdgTtlR {
+  padding: 0px;
+}
+
+.wdgTtlC, .wdgTtlC a {
+  padding: 0px;
+  width: 100%;
+  /*color: #1B4860; *//* #556666 colorBatchHeader */
+  font-size:14px;  /* size=2 */
+  font-weight:bold;
+  text-align:left;
+}
+
+
+.wdgTtlActC {
+  padding: 0px;
+  text-align: right;
+  margin-left: auto;
+  width: 2%
+}
+
+/* ============================= Address Table ========================*/
+
+.addrT {
+  margin: 0px;
+  border-collapse: collapse;
+  border: 1px solid #c1c1c1;
+}
+
+.xmlCfgT {
+  padding: 0px;
+  margin:  0px;
+  border-collapse: collapse;
+  border: 1px solid #c1c1c1;
+}
+
+.xmlCfgT tr, .xmlCfgT td {
+  border-collapse: collapse;
+  border: 1px solid #c1c1c1;
+}
+
+/* ============================= Logout Message ========================*/
+.logoutMsg {
+  font-size:20px;
+  margin-top: 60px;
+  margin-left: 50px;
+}
+
+.logoutMsg a, #TimedOutBodyIdentifier, #TimedOutBodyIdentifier a {
+  padding: 8px;
+  font-size:20px;
+  font-weight:normal;
+  text-decoration:none;
+}
+
+/* ============================= End of Logout Message ========================*/
+
+.strBxC { 
+  text-align: left; 
+  padding: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.dtBxC { text-align: left; white-space: nowrap;}
+.chkBxC { text-align: center; }
+.actBxC, .liActBxC { text-align: center; white-space: nowrap;}
+.numBxC { text-align: right; }
+
+.ibCol.chkBxC, .ibCol .chkBxC, .rdTDC.chkBxC, .rdTDC .chkBxC { text-align: left; }
+.ibCol.actBxC, .ibCol .actBxC  { text-align: left; }
+.ibTCell.actBxC, .ibTCell .actBxC, .rdTDC.actBxC, .rdTDC .actBxC { text-align: left; }
+.ibCol.numBxC, .ibCol .numBxC, .rdTDC.numBxC, .rdTDC .numBxC { text-align: left; }
+
+
+
+.bsHR .strBxC { text-align: center; }
+.bssDR .strBxC { text-align: center; }
+.bssDR .dtBxC { text-align: center; }
+.bssDR .numBxC { text-align: center; }
+
+.numBxC.ed { text-align: left; }
+.strBxC.ed { text-align: left; }
+.liActBxC.ed { text-align: center; }
+.lft { text-align: left; }
+.rght { text-align: right; }
+
+
+/* red */
+.Warn  { color:#FF0000;}
+
+.dis { color: #AAAAAA !important; }
+
+.bigFnt { font-size: 14px; }
+/*.mnd { background-color: #ffe0c9;*/
+/*}*/
+
+.mnd,.mnd a:link {
+  color: #f17a22;
+}
+
+.htaeHDiv {
+  position:fixed;
+  background-color: #FCFCFC;
+  top:0px;  left: 0px;
+  width:100%;
+  margin: 0px;
+  /*border: 1px solid blue;*/
+}
+
+.flexAppFrame {
+  /*border: 1px solid green;*/
+  /*float:left;*/
+  /*position:absolute;*/
+  /*top:52px;*/
+  z-index: 0;
+  width:100%;
+  /*top:0px;*/
+  /*position:relative;*/
+  /*height:100%;*/
+  /*top:104px;*/
+  /*height:500px;*/
+  /*display: none;*/
+  /*position:fixed;*/
+  /*top:200px; left: 0px;*/
+  background-color: #FCFCFC;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+/* needed for minibatcher in manage parts screen */
+.EditablePartSummary .ed.bsoDTC { text-align: left; }
+.EditablePartSummary .bsoHTC { text-align: center; }
+
+/* news and announcement frame */
+/*.anFrmT {*/
+  /*border:1px solid red;*/
+  /*border-collapse:collapse;*/
+  /*border:0px solid transparent;*/
+  /*margin: 0px;*/
+  /*padding: 0px;*/
+  /*width:100%;*/
+  /*text-align: left;*/
+  /*vertical-align: top;*/
+/*}*/
+
+/*.dtLn {*/
+  /*border:1px solid red;*/
+  /*vertical-align: middle;*/
+  /*text-align: left;*/
+  /*white-space: nowrap;*/
+  /*padding-bottom: 1px;*/
+  /*color: #C1C1C1;*/
+  /*font-style: italic;*/
+/*}*/
+
+/*.txtLn {*/
+  /*border:1px solid red;*/
+  /*text-align: left;*/
+  /*padding-bottom:2px;*/
+  /*vertical-align: middle;*/
+/*}*/
+
+/*.emptyTxtLn {*/
+  /*vertical-align: middle;*/
+  /*height:80px;*/
+  /*width: 99%;*/
+  /*border:1px solid #AAAAAA;*/
+  /*font-size: 14px;*/
+  /*font-style: italic;*/
+/*}*/
+
+/* SessionSummary page override */
+.SessionSummary .sTable { margin-left: 8px; }
+
+
+/* ========= Impact summary page table ========= */
+.impctT {}
+
+.impctT td {
+  padding-top: 8px;
+}
+
+.impctT img {
+  float: left;
+  /*padding-right: 8px;*/
+}
+
+.impctT a {
+  padding-left: 120px;
+}
+
+.impctT p {
+  padding-left: 280px;
+  text-align: left;
+  margin-top: 0px;
+}
+
+.impctT ul {
+  padding-left: 320px;
+}
+
+.impctBT {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.mnTitleBar {
+  background-color: #F17A22;
+  color: #F17A22;
+  border: none;
+  height: 1px;
+}
+
+.posReconErrStrBxC { text-align: left; width:350px; }
+
+td.matrixNoBorders { border-bottom:0px solid black; border-top:0px solid black; }
+td.matrixNoTopBorder { border-top:0px solid black; }
+.matHid { display:none; }
+.matSep { background:white; border-left:0px white solid; border-bottom:1px white solid; border-right:0px white solid; }
+.matTop { background:white; }
+
+/* ============================= End. ========================*/
+

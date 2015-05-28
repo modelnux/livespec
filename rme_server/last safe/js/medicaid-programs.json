@@ -1,0 +1,674 @@
+[
+  {
+    "id": "55005e47955d4780e7fa199e",
+    "shortName": "ND Medicaid",
+    "name": "North Dakota Medicaid",
+    "type": "Medicaid",
+    "start": "2013 Q2",
+    "end": "2015 Q4"
+  },
+  {
+    "id": "55005e47768776c30813e57f",
+    "shortName": "CA Medicaid",
+    "name": "California Medicaid",
+    "type": "Medicaid",
+    "start": "2011 Q2",
+    "end": "2018 Q1"
+  },
+  {
+    "id": "55005e47419f7c082c2f533c",       
+    "shortName": "NB SPAP",
+    "name": "Nebraska SPAP",
+    "type": "SPAP",
+    "start": "2011 Q3",
+    "end": "2015 Q4"
+  },
+  {
+    "id": "55005e4778fc2cf9fea3c5f7",
+    "shortName": "AZ ADAP",
+    "name": "Arizona ADAP",
+    "type": "ADAP",
+    "start": "2010 Q4",
+    "end": "2018 Q2"
+  },
+  {
+    "id": "55005e475c9375bf40e83761",
+    "shortName": "IL Medicaid",
+    "name": "Illinois Medicaid",
+    "type": "Medicaid",
+    "start": "2012 Q2",
+    "end": "2025 Q3"
+  },
+  {
+    "id": "55005e4761b3a07b4edc59ec",
+    "shortName": "GA ADAP",
+    "name": "Georgia ADAP",
+    "type": "ADAP",
+    "start": "2009 Q1",
+    "end": "2016 Q3"
+  },
+  {
+    "id": "55005e474f8b93959356d502",
+    "shortName": "MI SPAP",
+    "name": "Missouri SPAP",
+    "type": "SPAP",
+    "start": "2010 Q2",
+    "end": "2015 Q4"
+  },
+  {
+    "id": "55005e473f44852ecd80da3c",
+    "shortName": "NH Medicaid",
+    "name": "New Hampshire Medicaid",
+    "type": "Medicaid",
+    "start": "2009 Q4",
+    "end": "2015 Q3"
+  },
+  {
+    "id": "55005e476092d22afc310f05",
+    "shortName": "VI SPAP",
+    "name": "Virgin Islands SPAP",
+    "type": "SPAP",
+    "start": "2009 Q2",
+    "end": "2018 Q3"
+  },
+  {
+    "id": "55005e4797ac2773f99d7b7a",
+    "shortName": "LI SPAP",
+    "name": "Louisiana SPAP",
+    "type": "SPAP",
+    "start": "2010 Q2",
+    "end": "2018 Q4"
+  },
+  {
+    "id": "55005e470cdbac47bc7baebf",
+    "shortName": "HW ADAP",
+    "name": "Hawaii ADAP",
+    "type": "ADAP",
+    "start": "2010 Q2",
+    "end": "2025 Q1"
+  },
+  {
+    "id": "55005e473ba457bd3678b912",
+    "shortName": "VI ADAP",
+    "name": "Virginia ADAP",
+    "type": "ADAP",
+    "start": "2012 Q3",
+    "end": "2015 Q1"
+  },
+  {
+    "id": "55005e47af43e210dd614b56",
+    "shortName": "FL Medicaid",
+    "name": "Florida State Medicaid",
+    "type": "Medicaid",
+    "start": "2009 Q1",
+    "end": "2016 Q1"
+  },
+  {
+    "id": "55005e473c320e81000462cf",
+    "shortName": "NM ADAP",
+    "name": "New Mexico ADAP",
+    "type": "ADAP",
+    "start": "2010 Q2",
+    "end": "2019 Q2"
+  },
+  {
+    "id": "55005e47f282b2ef9167b0f8",
+    "shortName": "IW ADAP",
+    "name": "Iowa ADAP",
+    "type": "ADAP",
+    "start": "2009 Q4",
+    "end": "2019 Q1"
+  },
+  {
+    "id": "55005e47f022f3492c2431f2",
+    "shortName": "NV Medicaid",
+    "name": "Nevada Medicaid",
+    "type": "Medicaid",
+    "start": "2012 Q3",
+    "end": "2018 Q1"
+  },
+  {
+    "id": "55005e47ee8ce4099c903c02",
+    "shortName": "MI SPAP",
+    "name": "Missouri SPAP",
+    "type": "SPAP",
+    "start": "2013 Q2",
+    "end": "2016 Q1"
+  },
+  {
+    "id": "55005e47de737051eb3be3cc",
+    "shortName": "ID ADAP",
+    "name": "Idaho ADAP",
+    "type": "ADAP",
+    "start": "2009 Q4",
+    "end": "2016 Q2"
+  },
+  {
+    "id": "55005e4798926658407293a2",
+    "shortName": "NY SPAP",
+    "name": "New York SPAP",
+    "type": "SPAP",
+    "start": "2010 Q2",
+    "end": "2019 Q2"
+  },
+  {
+    "id": "55005e4742075bc5f03dca9f",
+    "shortName": "PA SPAP",
+    "name": "Pennsylvania SPAP",
+    "type": "SPAP",
+    "start": "2010 Q3",
+    "end": "2015 Q3"
+  },
+  {
+    "id": "55005e47ab5a752b45333782",
+    "shortName": "NJ ADAP",
+    "name": "New Jersey ADAP",
+    "type": "ADAP",
+    "start": "2011 Q2",
+    "end": "2016 Q2"
+  },
+  {
+    "id": "55005e470d2567332b3b9668",
+    "shortName": "AK SPAP",
+    "name": "Alaska SPAP",
+    "type": "SPAP",
+    "start": "2012 Q2",
+    "end": "2025 Q4"
+  },
+  {
+    "id": "55005e47b6694db68bf00c2f",
+    "shortName": "WA ADAP",
+    "name": "Washington ADAP",
+    "type": "ADAP",
+    "start": "2011 Q3",
+    "end": "2019 Q1"
+  },
+  {
+    "id": "55005e47d301145c7445d623",
+    "shortName": "CO Medicaid",
+    "name": "Colorado Medicaid",
+    "type": "Medicaid",
+    "start": "2011 Q2",
+    "end": "2025 Q1"
+  },
+  {
+    "id": "55005e47dc0596ae18e5c12a",
+    "shortName": "AZ ADAP",
+    "name": "Arizona ADAP",
+    "type": "ADAP",
+    "start": "2010 Q4",
+    "end": "2019 Q2"
+  },
+  {
+    "id": "55005e475b7c8d2dca949e97",
+    "shortName": "ND ADAP",
+    "name": "North Dakota ADAP",
+    "type": "ADAP",
+    "start": "2009 Q2",
+    "end": "2018 Q3"
+  },
+  {
+    "id": "55005e4739efa6492885cc5a",
+    "shortName": "NC ADAP",
+    "name": "North Carolina ADAP",
+    "type": "ADAP",
+    "start": "2012 Q3",
+    "end": "2025 Q4"
+  },
+  {
+    "id": "55005e472a175964d7e32072",
+    "shortName": "DE Medicaid",
+    "name": "Delaware Medicaid",
+    "type": "Medicaid",
+    "start": "2010 Q4",
+    "end": "2015 Q1"
+  },
+  {
+    "id": "55005e47af781f52681e9752",
+    "shortName": "CN SPAP",
+    "name": "Connecticut SPAP",
+    "type": "SPAP",
+    "start": "2011 Q1",
+    "end": "2018 Q2"
+  },
+  {
+    "id": "55005e47087c0b76e38d09da",
+    "shortName": "ND SPAP",
+    "name": "North Dakota SPAP",
+    "type": "SPAP",
+    "start": "2011 Q3",
+    "end": "2015 Q1"
+  },
+  {
+    "id": "55005e4736c1741f6c41e5c2",
+    "shortName": "CA ADAP",
+    "name": "California ADAP",
+    "type": "ADAP",
+    "start": "2009 Q1",
+    "end": "2019 Q2"
+  },
+  {
+    "id": "55005e475382afe6b5eab465",
+    "shortName": "NB Medicaid",
+    "name": "Nebraska Medicaid",
+    "type": "Medicaid",
+    "start": "2013 Q2",
+    "end": "2025 Q1"
+  },
+  {
+    "id": "55005e47178b6d160aec03b9",
+    "shortName": "AZ ADAP",
+    "name": "Arizona ADAP",
+    "type": "ADAP",
+    "start": "2009 Q4",
+    "end": "2016 Q1"
+  },
+  {
+    "id": "55005e479cd237160acbdb83",
+    "shortName": "IL SPAP",
+    "name": "Illinois SPAP",
+    "type": "SPAP",
+    "start": "2009 Q3",
+    "end": "2016 Q2"
+  },
+  {
+    "id": "55005e47e446dde321d8ffa2",
+    "shortName": "GO SPAP",
+    "name": "Georgia SPAP",
+    "type": "SPAP",
+    "start": "2010 Q2",
+    "end": "2016 Q1"
+  },
+  {
+    "id": "55005e4734668f5268beb12f",
+    "shortName": "MI Medicaid",
+    "name": "Missouri Medicaid",
+    "type": "Medicaid",
+    "start": "2010 Q4",
+    "end": "2016 Q3"
+  },
+  {
+    "id": "55005e4741c009e40809ca93",
+    "shortName": "NH SPAP",
+    "name": "New Hampshire SPAP",
+    "type": "SPAP",
+    "start": "2012 Q3",
+    "end": "2018 Q4"
+  },
+  {
+    "id": "55005e475409cd43cf29b633",
+    "shortName": "VI ADAP",
+    "name": "Virgin Islands ADAP",
+    "type": "ADAP",
+    "start": "2013 Q4",
+    "end": "2019 Q2"
+  },
+  {
+    "id": "55005e4742649e22b62b0064",
+    "shortName": "LI Medicaid",
+    "name": "Louisiana Medicaid",
+    "type": "Medicaid",
+    "start": "2010 Q3",
+    "end": "2025 Q4"
+  },
+  {
+    "id": "55005e47ec27bfff5a237585",
+    "shortName": "HI ADAP",
+    "name": "Hawaii ADAP",
+    "type": "ADAP",
+    "start": "2011 Q1",
+    "end": "2015 Q4"
+  },
+  {
+    "id": "55005e47a37c9b436255365a",
+    "shortName": "VI ADAP",
+    "name": "Virginia ADAP",
+    "type": "ADAP",
+    "start": "2013 Q4",
+    "end": "2025 Q4"
+  },
+  {
+    "id": "55005e47d5b7d9d91f66c78b",
+    "shortName": "FL Medicaid",
+    "name": "Florida State Medicaid",
+    "type": "Medicaid",
+    "start": "2013 Q2",
+    "end": "2019 Q3"
+  },
+  {
+    "id": "55005e4789adb989ea1587dd",
+    "shortName": "NM ADAP",
+    "name": "New Mexico ADAP",
+    "type": "ADAP",
+    "start": "2011 Q4",
+    "end": "2025 Q2"
+  },
+  {
+    "id": "55005e473c2ce2481d08fe1e",
+    "shortName": "IW Medicaid",
+    "name": "Iowa Medicaid",
+    "type": "Medicaid",
+    "start": "2011 Q1",
+    "end": "2025 Q3"
+  },
+  {
+    "id": "55005e479cf987b4583dff07",
+    "shortName": "NV Medicaid",
+    "name": "Nevada Medicaid",
+    "type": "Medicaid",
+    "start": "2013 Q2",
+    "end": "2025 Q4"
+  },
+  {
+    "id": "55005e47e801bc6385e39964",
+    "shortName": "MI Medicaid",
+    "name": "Missouri Medicaid",
+    "type": "Medicaid",
+    "start": "2010 Q2",
+    "end": "2016 Q2"
+  },
+  {
+    "id": "55005e4753c973492ad0768f",
+    "shortName": "ID ADAP",
+    "name": "Idaho ADAP",
+    "type": "ADAP",
+    "start": "2013 Q1",
+    "end": "2016 Q3"
+  },
+  {
+    "id": "55005e474fa7002a106cd328",
+    "shortName": "NY ADAP",
+    "name": "New York ADAP",
+    "type": "ADAP",
+    "start": "2013 Q4",
+    "end": "2019 Q3"
+  },
+  {
+    "id": "55005e47823dea9a1b635976",
+    "shortName": "PN Medicaid",
+    "name": "Pennsylvania Medicaid",
+    "type": "Medicaid",
+    "start": "2010 Q2",
+    "end": "2016 Q4"
+  },
+  {
+    "id": "55005e47ad8d6f722359447e",
+    "shortName": "NJ ADAP",
+    "name": "New Jersey ADAP",
+    "type": "ADAP",
+    "start": "2010 Q3",
+    "end": "2015 Q1"
+  },
+  {
+    "id": "55005e47cb0af8948c72637a",
+    "shortName": "AK SPAP",
+    "name": "Alaska SPAP",
+    "type": "SPAP",
+    "start": "2010 Q1",
+    "end": "2019 Q2"
+  },
+  {
+    "id": "55005e47fd6c8f6037785af8",
+    "shortName": "WS SPAP",
+    "name": "Washington ADAP",
+    "type": "SPAP",
+    "start": "2009 Q3",
+    "end": "2018 Q3"
+  },
+  {
+    "id": "55005e47efc6c6c7e3a88ed5",
+    "shortName": "CO SPAP",
+    "name": "Colorado SPAP",
+    "type": "SPAP",
+    "start": "2009 Q2",
+    "end": "2019 Q2"
+  },
+  {
+    "id": "55005e4792d5dfa7193b40e2",
+    "shortName": "AZ Medicaid",
+    "name": "Arizona Medicaid",
+    "type": "Medicaid",
+    "start": "2009 Q4",
+    "end": "2016 Q1"
+  },
+  {
+    "id": "55005e47eb52ececad81e146",
+    "shortName": "ND Medicaid",
+    "name": "North Dakota Medicaid",
+    "type": "Medicaid",
+    "start": "2013 Q4",
+    "end": "2015 Q1"
+  },
+  {
+    "id": "55005e476f6a2b5416010bc3",
+    "shortName": "NC Medicaid",
+    "name": "North Carolina Medicaid",
+    "type": "Medicaid",
+    "start": "2010 Q4",
+    "end": "2016 Q4"
+  },
+  {
+    "id": "55005e471a5779288a149bcc",
+    "shortName": "DE Medicaid",
+    "name": "Delaware Medicaid",
+    "type": "Medicaid",
+    "start": "2010 Q4",
+    "end": "2015 Q3"
+  },
+  {
+    "id": "55005e47f71bea0d6710964b",
+    "shortName": "CN ADAP",
+    "name": "Connecticut ADAP",
+    "type": "ADAP",
+    "start": "2010 Q3",
+    "end": "2019 Q4"
+  },
+  {
+    "id": "55005e47ac140201efe34b9d",
+    "shortName": "ND ADAP",
+    "name": "North Dakota ADAP",
+    "type": "ADAP",
+    "start": "2012 Q1",
+    "end": "2018 Q2"
+  },
+  {
+    "id": "55005e4706b1324a1a623284",
+    "shortName": "CA ADAP",
+    "name": "California ADAP",
+    "type": "ADAP",
+    "start": "2011 Q3",
+    "end": "2016 Q2"
+  },
+  {
+    "id": "55005e4780dbcabe66a462fa",
+    "shortName": "NB Medicaid",
+    "name": "Nebraska Medicaid",
+    "type": "Medicaid",
+    "start": "2011 Q1",
+    "end": "2015 Q1"
+  },
+  {
+    "id": "55005e472b9dceda5eecb2cb",
+    "shortName": "AZ ADAP",
+    "name": "Arizona ADAP",
+    "type": "ADAP",
+    "start": "2009 Q2",
+    "end": "2025 Q2"
+  },
+  {
+    "id": "55005e478cbcf7f3f272205e",
+    "shortName": "IL ADAP",
+    "name": "Illinois ADAP",
+    "type": "ADAP",
+    "start": "2012 Q3",
+    "end": "2025 Q2"
+  },
+  {
+    "id": "55005e4734fa7f99552f2ffa",
+    "shortName": "GR ADAP",
+    "name": "Georgia ADAP",
+    "type": "ADAP",
+    "start": "2009 Q2",
+    "end": "2019 Q3"
+  },
+  {
+    "id": "55005e470c3b05843c28b8eb",
+    "shortName": "MI SPAP",
+    "name": "Missouri SPAP",
+    "type": "SPAP",
+    "start": "2013 Q4",
+    "end": "2015 Q3"
+  },
+  {
+    "id": "55005e47e1fc9886abed29d9",
+    "shortName": "NH Medicaid",
+    "name": "New Hampshire Medicaid",
+    "type": "Medicaid",
+    "start": "2012 Q4",
+    "end": "2015 Q4"
+  },
+  {
+    "id": "55005e4790999cc4870d567b",
+    "shortName": "VI Medicaid",
+    "name": "Virgin Islands Medicaid",
+    "type": "Medicaid",
+    "start": "2009 Q1",
+    "end": "2016 Q4"
+  },
+  {
+    "id": "55005e473cc11d0a0082706d",
+    "shortName": "LI ADAP",
+    "name": "Louisiana ADAP",
+    "type": "ADAP",
+    "start": "2011 Q1",
+    "end": "2019 Q3"
+  },
+  {
+    "id": "55005e476355db9f5ad9086b",
+    "shortName": "HI SPAP",
+    "name": "Hawaii SPAP",
+    "type": "SPAP",
+    "start": "2013 Q1",
+    "end": "2025 Q1"
+  },
+  {
+    "id": "55005e475bc8d31b84ca42be",
+    "shortName": "VI SPAP",
+    "name": "Virginia SPAP",
+    "type": "SPAP",
+    "start": "2012 Q4",
+    "end": "2019 Q1"
+  },
+  {
+    "id": "55005e474e7262017b87e21a",
+    "shortName": "FL ADAP",
+    "name": "Florida State ADAP",
+    "type": "ADAP",
+    "start": "2009 Q4",
+    "end": "2025 Q3"
+  },
+  {
+    "id": "55005e47d5a791ac1aab4882",
+    "shortName": "NM ADAP",
+    "name": "New Mexico ADAP",
+    "type": "ADAP",
+    "start": "2011 Q3",
+    "end": "2019 Q4"
+  },
+  {
+    "id": "55005e47b0a45f45fdb8ca47",
+    "shortName": "IW SPAP",
+    "name": "Iowa SPAP",
+    "type": "SPAP",
+    "start": "2012 Q3",
+    "end": "2015 Q1"
+  },
+  {
+    "id": "55005e47e044899bb083e085",
+    "shortName": "NV Medicaid",
+    "name": "Nevada Medicaid",
+    "type": "Medicaid",
+    "start": "2011 Q2",
+    "end": "2015 Q3"
+  },
+  {
+    "id": "55005e471c5f3ace07a56a49",
+    "shortName": "MI Medicaid",
+    "name": "Missouri Medicaid",
+    "type": "Medicaid",
+    "start": "2011 Q2",
+    "end": "2018 Q1"
+  },
+  {
+    "id": "55005e47b6446d0abcce7940",
+    "shortName": "ID ADAP",
+    "name": "Idaho ADAP",
+    "type": "ADAP",
+    "start": "2012 Q1",
+    "end": "2025 Q4"
+  },
+  {
+    "id": "55005e47337be8fecb4e9e69",
+    "shortName": "NY ADAP",
+    "name": "New York ADAP",
+    "type": "ADAP",
+    "start": "2009 Q3",
+    "end": "2025 Q2"
+  },
+  {
+    "id": "55005e47bd1f85b9181d0aa2",
+    "shortName": "PN Medicaid",
+    "name": "Pennsylvania Medicaid",
+    "type": "Medicaid",
+    "start": "2010 Q4",
+    "end": "2018 Q3"
+  },
+  {
+    "id": "55005e470e01397885e27571",
+    "shortName": "NJ Medicaid",
+    "name": "New Jersey Medicaid",
+    "type": "Medicaid",
+    "start": "2010 Q4",
+    "end": "2015 Q3"
+  },
+  {
+    "id": "55005e47b75568d1ae0d204b",
+    "shortName": "AK Medicaid",
+    "name": "Alaska Medicaid",
+    "type": "Medicaid",
+    "start": "2012 Q1",
+    "end": "2018 Q4"
+  },
+  {
+    "id": "55005e4728f7afa7fac1fab9",
+    "shortName": "WS Medicaid",
+    "name": "Washington Medicaid",
+    "type": "Medicaid",
+    "start": "2010 Q3",
+    "end": "2016 Q3"
+  },
+  {
+    "id": "55005e47e4cee49bb7dd20d6",
+    "shortName": "CO ADAP",
+    "name": "Colorado ADAP",
+    "type": "ADAP",
+    "start": "2012 Q3",
+    "end": "2015 Q2"
+  },
+  {
+    "id": "55005e47e1e3554ad521701a",
+    "shortName": "AZ ADAP",
+    "name": "Arizona ADAP",
+    "type": "ADAP",
+    "start": "2010 Q4",
+    "end": "2016 Q4"
+  },
+  {
+    "id": "55005e47639322214257457a",
+    "shortName": "ND SPAP",
+    "name": "North Dakota SPAP",
+    "type": "SPAP",
+    "start": "2010 Q2",
+    "end": "2019 Q1"
+  }
+]

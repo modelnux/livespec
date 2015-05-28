@@ -1,0 +1,213 @@
+@import "main";
+@import "modals";
+
+.config-body{
+	height: 100%;
+	overflow: hidden;
+	width: 1420px;
+	margin: auto;
+}
+.padding{
+	position: absolute;
+	height: 130px;
+	top: 0px;
+	background: url('../img/bg-img.png');
+	background-size: 100%;
+	z-index: 300;
+}
+.req-alert {
+	background-color: $red;
+	color: white;
+	font-size: 9px !important;
+	display:inline;
+	margin-left: 10px;
+	padding: 2px 4px;
+	border-radius: 4px;
+	position: relative;
+	top: -3px;
+	}
+.req-icon {
+	color: $red;
+	font-size: 14px;
+	padding-left: 10px;
+}
+
+.left-panel{
+	background-color: $light-blue;
+	padding: 2px;
+    display: inline-block;
+    height: 84%;
+	width: 350px;
+    min-height: 1000px;
+    overflow: auto;
+    position: absolute;
+    border-right: 1px solid $light-grey;
+
+    & .section-title{
+		padding: 15px 0 5px 20px;
+		font-size: 16px;
+		font-weight: 700;
+    }
+
+    & li{
+   		
+    	font-weight: 400;
+    	padding: 5px 0;
+    	margin-left: 20px;
+		padding-left:10px;
+		margin-right: 30px;
+		list-style-type: none;
+		cursor: default;
+		border-top: 1px solid rgba(0,0,0,0);
+		border-bottom: 1px solid rgba(0,0,0,0);
+		& p:first-child {
+			max-width: 190px;
+			white-space: nowrap;  
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: inline-block
+		}
+
+    		&:hover {
+				background-color: $lighter-grey;
+			}
+			&:active{
+				background-color: $blue;
+			}
+
+    	&:last-child{
+    		margin-bottom: 20px;
+    	}
+
+    	& .check-icon {
+    		color: $green;
+    		position: relative;
+    		left: 20px;
+    		float: right;
+    	}
+    	& .section-item-alert {
+			color: $red;
+			padding: 1px 0;
+			font-size: 18px;
+			position: relative;
+    		left: 20px;
+    	}
+    }
+}
+
+.right-panel{
+	background-color: white;
+	padding-left: 5px;
+	width: 1060px;
+	height:84%;
+	overflow: auto;
+	position: absolute;
+	margin-left: 355px;
+
+	& .right-panel-section{
+		padding: 20px;
+
+		& .subtitle-desc{
+			display: inline-block;
+			font-size: 14px;
+		}
+	}
+
+	& .section-title-selected{
+		padding:5px;
+		padding-left:20px;
+		font-size: 18px;
+		font-weight: 600;
+
+	}
+	& .section-selected{
+		border-bottom: 2px solid $light-grey;
+		& .right-panel-warning {
+			& i{
+				color: $red;
+				font-size:18px;
+			}
+			& p{
+				color: $red;
+				padding:0 0 10px 10px;
+				font-weight: 500;
+			}
+		}
+		& h3 {
+			font-size: 14px;
+			font-weight: 500;
+			margin-left: 5px;
+			padding-bottom: 5px;
+			display: inline-block;
+		}
+		& p {
+			display: inline-block;
+			font-weight: 400;
+			font-size: 16px;
+		}
+	}
+
+	& .product-tag{
+		border-bottom: 1px solid $light-grey;
+		border-top: 1px solid rgba(0,0,0,0);
+		height: 35px;
+		padding-left: 20px;
+		padding-bottom: 5px;
+		padding-top: 20px;
+		cursor: pointer;
+		&:hover {
+			background: $lighter-grey;
+			border-top: 1px solid $light-grey;	
+			border-bottom: 1px solid $light-grey;	
+		}
+		&:active{
+			background-color: $light-blue;
+		}
+		& .check-icon {
+    		color: $green;
+    		float: right;
+    		position: relative;
+    		top: 0px;
+    		left: -20px;
+    		font-size: 18px;
+    	}
+		img{
+			background-color: $grey;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+			width: 40px;
+			height: 40px;
+			display:inline-block;
+			margin-top:10px;
+			background-repeat:none;
+		}
+		& .product-desc{
+			display:inline-block;
+			position:relative;
+			top:-8px;
+			padding-left:10px;
+		}
+		& b{
+			font-weight: 600;
+		}
+		& p {
+			vertical-align: text-top;
+			font-weight: 500;
+			display: inline-block;
+			margin-left: 30px;
+			&.product-name {
+				width: 320px;
+			}
+			&.prod-price{
+				margin-left: 60px;
+			}
+			&.prod-id {
+
+			}
+		}
+		& p:nth-child(4){
+			margin-left: 20px;
+		}
+	}
+}

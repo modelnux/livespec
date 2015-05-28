@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RME LS Livespec</title>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/mCSB_buttons.png">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/modals.css">
+</head>
+<body>
+<div class="loader"></div>
+
+
+<!-- POPOVER WINDOWS -->
+
+<!-- add to end products tooltip -->
+<div class='endDateProductsTableTip tooltip-right'><div class='clearfix'><h3><i class='fa fa-info-circle'></i> Select Products to End-Date</h3><p style='position: relative;'>Click here to access your product catalog, then select products to end-date in your mass update.</p></div></div>
+
+<!-- add to add products tooltip -->
+<div class='addProductsTableTip tooltip-right'><div class='clearfix'><h3><i class='fa fa-info-circle'></i> Select Products to Add</h3><p style='position: relative;'>Click here to access your product catalog, then select products to add in your mass update.</p></div></div>
+
+<!-- adjust URA modal -->
+<div class="adjustURAModal">
+	<div class="titleArea clearfix">
+		<h1>Adjust URA Formula</h1>
+		<i class=" pull-right fa fa-times"></i>
+	</div>
+	<div class="modalBody clearfix">
+
+	<form action="">
+		<input class="default"name="date" checked="checked" type="radio" ><p class="defaultOption">Default Program URA</p><br>
+		<input class="selected"name="date" type="radio" ><div><input class="select-input" placeholder="Formula Lookup" type="text"><div class="icon-input-tag"><i class="fa fa-binoculars"></i></div></div>
+	</form>
+
+	<div class="uraFormulaArea">
+		<div class="leftArea">
+			<table>
+				<tr>
+					<td><p>Amount 1</p><input placeholder="$12,000.00" type="text" class="input"></td>
+					<td><p>Percent 1</p><input placeholder="15%" type="text" class="input"></td>
+				</tr>
+				<tr>
+					<td><p>Amount 2</p><input placeholder="$250.54" type="text" class="input"></td>
+					<td><p>Percent 2</p><input placeholder="12%" type="text" class="input"></td>
+				</tr>
+				<tr>
+					<td><p>Amount 3</p><input placeholder="$1,250.34" type="text" class="input"></td>
+					<td><p>Percent 3</p><input placeholder="3%" type="text" class="input"></td>
+				</tr>
+			</table>
+		</div>
+		<div class="rightArea">
+			<p>URA Formula Definition</p>
+			<textarea name="" id="" cols="30" rows="7"></textarea>
+		</div>
+	</div>
+
+	</div>
+	<div class="actionArea clearfix">
+		<button class="btn btn-short-text btn-primary pull-right selectURA">OK</button>
+		<button class="btn pull-right cancel">Cancel</button>
+	</div>
+</div>
+
+
+
+<!-- adjust quarter modal -->
+<div class="adjustQuarterModal">
+	<div class="titleArea clearfix">
+		<h1>Adjust End-Date</h1>
+		<i class=" pull-right fa fa-times"></i>
+	</div>
+	<div class="modalBody clearfix">
+
+	<form action="">
+		<input class="default" name="date" checked="checked" type="radio" ><p class="defaultOption">Greater of Market Entry Date and Program Start Date</p><br>
+		<input class="selected" name="date" type="radio" >
+		<div class="searchInputPack">
+			<label for="">YEAR</label>
+			<input class="select-input yearSelect" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+			<div class='yearList'></div>
+		</div>
+		<div class="searchInputPack">
+			<label for="">QUARTER</label>
+			<input class="select-input qtrSelect" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+			<div class='qtrList'></div>
+		</div>
+	</form>
+
+	</div>
+	<div class="actionArea clearfix">
+		<button class="btn btn-short-text btn-primary pull-right selectQuarter">OK</button>
+		<button class="btn pull-right cancel">Cancel</button>
+	</div>
+</div>
+
+<!-- add product modal -->
+<div class="addProductModal">
+	<div class="titleArea clearfix">
+		<h1><i class="fa fa-check"></i> Select Products</h1>
+		<i class=" pull-right fa fa-times"></i>
+	</div>
+	<div class="modalBody clearfix">
+				<div class="modalFilterArea">
+					<div class="searchInputPack">
+						<label for="">NDC</label>
+						<input class="select-input typeSelect" value="" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+					</div>
+					<div class="searchInputPack">
+						<label for="">PRODUCT NAME</label>
+						<input class="select-input typeSelect" value="" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+					</div>
+					<div class="searchInputPack">
+						<label for="">PRODUCT/CATEGORY #</label>
+						<input class="select-input typeSelect" value="" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+					</div>
+					<div class="searchInputPack">
+						<label for="">GENERIC/BRAND</label>
+						<input class="select-input typeSelect" value="" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+					</div>
+					<div class="searchInputPack">
+						<label for="">THERAPEUTIC CLASS</label>
+						<input class="select-input typeSelect" value="" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+						<div class='typeList'></div>
+						<div class="typeSelectedBoxes"></div>
+					</div>
+					<div class="searchInputPack">
+						<label for="">AUTHORIZED</label>
+						<input class="select-input stateSelect" value="" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+					</div>
+					<div class="searchInputPack dateRange">
+						<label for="">EXPIRATION DATE</label>
+						<div id="slider-range" class="slider-range"></div>
+						<p id="amount" class="amount"></p>
+					</div>
+					<button class="btn btn-primary">Filter Products</button>
+				</div>
+
+				<!-- TABLE -->
+				<h2>PRODUCT CATALOG</h2>
+				<div class="pagination-group btn-group pull-right">
+					<p class="pagination-text">1-50 of 120</p>
+					<button class="btn"><i class="fa fa-angle-left"></i></button>
+					<button class="btn"><i class="fa fa-angle-right"></i></button>	
+					<p class="pagination-length-text">Page Size</p><button class="listBtn btn pull-right">50 <i class="fa fa-sort-desc"></i></button>
+				</div>
+				<div class="tableBody productsToAddTable">
+
+					<table>
+						<tr>
+							<td class="check"><input class="checkAll" type="checkbox"></td>
+							<td>NDC 11 <i class="fa fa-sort"></i></td>
+							<td>Product Name <i class="fa fa-sort"></i></td>
+							<td>Description <i class="fa fa-sort"></i></td>
+						</tr>
+					</table>
+
+				</div><!-- /TABLE -->
+				
+				<div class="btnGroup">
+					<button class="btn btn selectProducts">Select Products</button>
+				</div>
+
+				<!-- TABLE -->
+				<h2>SELECTED PRODUCTS</h2>
+				<div class="pagination-group btn-group pull-right">
+					<p class="pagination-text">1-50 of 120</p>
+					<button class="btn"><i class="fa fa-angle-left"></i></button>
+					<button class="btn"><i class="fa fa-angle-right"></i></button>	
+					<p class="pagination-length-text">Page Size</p><button class="listBtn btn pull-right">50 <i class="fa fa-sort-desc"></i></button>
+				</div>
+				<div class="tableBody selectedProductsTable">
+					<table>
+						<tr>
+							<td class="check"><input class="checkAll" type="checkbox"></td>
+							<td>NDC 11 <i class="fa fa-sort"></i></td>
+							<td>Product Name <i class="fa fa-sort"></i></td>
+							<td>Description <i class="fa fa-sort"></i></td>
+						</tr>
+					</table>
+
+				</div><!-- /TABLE -->
+
+				<div class="btnGroup">
+					<button class="btn btn remove">Remove</button>
+				</div>
+	</div>
+	<div class="actionArea clearfix">
+		<button class="btn btn-short-text btn-go addAdds pull-right">Add Products</button>
+		<button class="btn btn-short-text btn-go addEnds pull-right">Add Products</button>
+		<button class="btn pull-right cancel">Cancel</button>
+	</div>
+</div>
+
+
+<!-- search dropdown modal -->
+<div class="searchDropdown">
+	<div class="dropdownControl">
+		<div class="openExtendedArea clearfix">
+			<p class="openCaption extended pull-left">Open Extended Search <i class="fa fa-caret-down"></i></p>
+			<i class="pull-right fa fa-times"></i>
+		</div>
+	</div>
+
+	<div class="inputArea clearfix">
+		<div class="leftInputs pull-left">
+			<div class="inputGroup">
+				<label for="">Customer ID</label>
+				<input class="input" type="text">
+				<label for="">Customer Name</label>
+				<input class="input" type="text">
+				<label for="">Customer COT</label>
+				<input class="select-input" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+				<label for="">Products</label>
+				<input class="icon-input" type="text"><div class="icon-input-tag"><i class="fa fa-binoculars"></i></div>
+				<label for="">Organizations</label>
+				<input class="icon-input" type="text"><div class="icon-input-tag"><i class="fa fa-binoculars"></i></div>
+				<input class="input-check" type="checkbox"><label class="checkLabel" for="">Only</label>
+			</div>
+			<div class="inputGroup">
+				<label for="">Status</label>
+				<input class="select-input" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+				<label for="">Rebate Program Type</label>
+				<input class="icon-input" type="text"><div class="icon-input-tag"><i class="fa fa-binoculars"></i></div>
+				<label for="">Effective Date</label>
+				
+				<div class="date-range-input-div">
+				<input class="icon-input" placeholder="Start Date" type="text"><div class="icon-input-tag"><i class="fa fa-calendar"></i></div> to <input class="icon-input" placeholder="End Date" type="text"><div class="icon-input-tag"><i class="fa fa-calendar"></i></div>
+				</div>
+				
+				<div class="date-range-input-div">
+				<label for="">Expire Date</label>
+				<input class="icon-input" placeholder="Start Date" type="text"><div class="icon-input-tag"><i class="fa fa-calendar"></i></div> to <input class="icon-input" placeholder="End Date" type="text"><div class="icon-input-tag"><i class="fa fa-calendar"></i></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="rightInputs pull-right">
+			<div class="inputGroup">
+				<label for="">Contract ID</label>
+				<input class="input" type="text">
+				<label for="">Contract Name</label>
+				<input class="input" type="text">
+				<label for="">Contract Type</label>
+				<input class="input" type="text">
+				<label for="">Domain</label>
+				<input class="input" type="text">
+			</div>
+		</div>
+
+		<div class="extendedSearchInputs pull-left clearfix">
+			<div class="leftInputs pull-left">
+			<div class="inputGroup">
+				<label for="">Contract Sub Type</label>
+				<input class="select-input" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+				<label for="">Term Type</label>
+				<input class="icon-input" type="text"><div class="icon-input-tag"><i class="fa fa-binoculars"></i></div>
+				<label for="">Program Only</label>
+				<input class="select-input" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+				<label for="">Trading Partners</label>
+				<input class="icon-input" type="text"><div class="icon-input-tag"><i class="fa fa-binoculars"></i></div>
+				<label for="">Term Name</label>
+				<input class="icon-input" type="text"><div class="icon-input-tag"><i class="fa fa-binoculars"></i></div>
+				<label for="">Program Name</label>
+				<input class="icon-input" type="text"><div class="icon-input-tag"><i class="fa fa-binoculars"></i></div>
+				<label for="">Strategy Name</label>
+				<input class="icon-input" type="text"><div class="icon-input-tag"><i class="fa fa-binoculars"></i></div>
+			</div>
+			</div>
+
+			<div class="rightInputs pull-right">
+			<div class="inputGroup">
+				<label for="">Business Segment</label>
+				<input class="icon-input" type="text"><div class="icon-input-tag"><i class="fa fa-binoculars"></i></div>
+				<label for="">Evergreen</label>
+				<input class="select-input" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+				<label for="">Generic/Brand</label>
+				<input class="select-input" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+				<label for="">Distribution Method</label>
+				<input class="select-input" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+				<label for="">Pricing Method</label>
+				<input class="icon-input" type="text"><div class="icon-input-tag"><i class="fa fa-binoculars"></i></div>
+				<label for="">Price Protection</label>
+				<input class="select-input" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+				<label for="">Currency</label>
+				<input class="select-input" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+			</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="btnArea clearfix">
+		<button class="pull-left search-btn-static btn btn-primary"><i class="fa fa-search"></i></button>
+		<button class="btn pull-right">Save as</button>
+		<button class="btn pull-right">Clear</button>
+	</div>
+</div>
+
+
+<!-- list sort popover -->
+<div class="list-sort-popover">
+	<nav>
+		<a data-type="config" href="#">50</a>
+		<a data-type="info" href="#">100</a>
+		<a data-type="remove" href="#">250</a>
+		<a data-type="remove" href="#">500</a>
+	</nav>
+</div>
+
+
+
+
+<!-- top nav dropdown -->
+<div class="top-nav-dropdown">
+	<nav>
+		<a data-type="config" href="#">Contracts</a>
+		<a data-type="info" href="#">Contract Templates</a>
+		<a data-type="remove" href="#">Mass Updates</a>
+		<a data-type="remove" href="#">Mass Updates Imports</a>
+		<a data-type="config" href="#">Medicaid Programs</a>
+		<a data-type="info" href="#">Price Monitoring</a>	
+	</nav>
+</div>
+
+<!--  /POPOVER WINDOWS -->
+
+
+<!-- TOP NAV -->
+<div class="topNav clearfix">
+	<ul class="nav clearfix">
+		<li class="menu"><i class="fa fa-reorder"></i></li>
+		<li class="back"><i class="fa fa-long-arrow-left"></i></li>
+		<li class="fwd disabled"><i class="fa fa-long-arrow-right"></i></li>
+		<li class="refresh"><i class="fa fa-refresh"></i></li>
+		<li class="home active"><i class="fa fa-home"></i></li>
+		<li class="config drop">Configuration <i class="fa fa-caret-down"></i></li>
+		<li class="customers drop">Customers <i class="fa fa-caret-down"></i></li>
+		<li class="products drop">Products <i class="fa fa-caret-down"></i></li>
+		<li class="pricing drop">Pricing <i class="fa fa-caret-down"></i></li>
+		<li class="contracts drop">Contracts <i class="fa fa-caret-down"></i></li>
+		<li class="compliance drop">Compliance <i class="fa fa-caret-down"></i></li>
+		<li class="sales drop">Sales <i class="fa fa-caret-down"></i></li>
+		<li class="external drop">External Sales <i class="fa fa-caret-down"></i></li>
+		<li class="extra drop selected">Extra <i class="fa fa-caret-down"></i></li>
+		<li class="user drop"><p>Aime Analyst</p> <i class="fa fa-caret-down"></i></li>
+		<li class="help active"><i class="fa fa-support"></i></li>
+	</ul>
+</div>
+<!-- /TOP NAV -->
+
+
+
+<!-- BREADCRUMBS -->
+<div class="breadcrumb clearfix">
+	<ul class="crumbs clearfix">
+		<li class="massUpdateCrumb">Medicaid<i class="fa fa-angle-right"></i></li>
+		<li class="massUpdateCrumb">Mass Update<i class="fa fa-angle-right"></i></li>
+		<li class="massUpdateNameCrumb">New Mass Update</li>
+
+	</ul>
+
+	<div class="tableNav clearfix"><!-- TABLE NAV BAR -->
+
+			<div class="tableActionButtons btn-group pull-right">
+				<i class="fa fa-times closeTable backToSearch"></i>
+				<button class="table-btn"><i class="fa fa-file-o"></i> New <i class="fa fa-caret-down"></i></button>
+				<button class="table-btn read">Read Only</button>
+				<button class="table-btn"><i class="fa fa-print"></i> Print</button>
+				<button class="table-btn"><i class="fa fa-cloud-download"></i> Export</button>
+			</div>
+
+	</div><!-- /TABLE NAV BAR -->
+
+</div>
+<!-- /BREADCRUMBS -->
+
+	<div class="mainBody clearfix"><!-- MAIN-BODY -->
+
+
+	<div class="leftPanel ui-layout-west"><!-- LEFT-PANEL -->
+		<div class="section section1">
+			<h2><i class="fa fa-arrow-circle-o-up"></i>MASS UPDATE ACTIONS</h2>
+			<ul class="sectionActions">
+				<li class="save"><i class="fa fa-save"></i>Save</li>
+				<li class="validate"><i class="fa fa-check-circle"></i>Validate</li>
+				<li class="submit"><i class="fa fa-sign-in"></i>Submit</li>
+				<li class="withdraw"><i class="fa fa-sign-out fa-flip-horizontal"></i>Withdraw</li>
+				<li class="implement"><i class="fa fa-rocket"></i>Implement</li>
+				<li class="delete"><i class="fa fa-trash"></i>Delete</li>
+			</ul>
+		</div>
+
+		<div class="section section2">
+			<div class="subsection">
+				<h3 class="noChildren"></i>Revision History</h3>
+			</div>
+			<div class="subsection">
+				<h3 class="active"><i class="fa fa-caret-down"></i>Related Items</h3>
+				<ul>
+					<li>Attachments</li>
+				</ul>
+			</div>
+			<div class="subsection">
+				<h3 class="noChildren massUpdateLink"></i>Mass Updates</h3>
+			</div>
+			<div class="subsection">
+				<h3 class="noChildren"></i>URA Formulas</h3>
+			</div>
+			<div class="subsection">
+				<h3 class="noChildren"></i>Saved Searches</h3>
+			</div>
+		</div>
+		<div class="section">
+			<h2><i class="fa fa-arrow-circle-o-up"></i>DETAILS</h2>
+			<div class="subsection">
+				<h3 class="noChildren"></i>Validation Status</h3>
+			</div>
+			<div class="subsection">
+				<h3 class="noChildren"></i>View Validation Results</h3>
+			</div>
+			<div class="subsection">
+				<h3 class="noChildren"></i>Approval Status</h3>
+			</div>
+			<div class="subsection">
+				<h3 class="noChildren"></i>Modified On: 01/23/2015 7:25AM</h3>
+			</div>
+			<div class="subsection">
+				<h3 class="noChildren"></i>Modified By: Aime Analyst</h3>
+			</div>
+		</div>
+
+	</div><!-- /LEFT-PANEL -->
+	
+
+	<div class="rightPanel ui-layout-center"><!-- RIGHT-PANEL -->
+	
+		<div class="wizardBody"><!-- WIZARD BODY -->
+		
+		<div class="wizardIndicator clearfix"><!-- WIZARD TITLE -->
+			<ul class="clearfix">
+				<li name="step1" class="visited"><div class="number"><p>1</p></div><p class="title">General Information</p></li>
+				<li name="step2" class="visited"><div class="number"><p>2</p></div><p class="title">Program Selection</p></li>
+				<li name="step3" class="current"><div class="number"><p>3</p></div><p class="title">Product Changes</p></li>
+				<li name="step4" class="unvisited"><div class="number"><p>4</p></div><p class="title">Mass Update Summary</p></li>
+				<li name="step5" class="unvisited"><div class="number"><p>5</p></div><p class="title">Approval Management</p></li>
+				<li name="step6" class="unvisited"><div class="number"><p>6</p></div><p class="title">Program Results</p></li>
+			</ul>
+
+		</div><!-- /WIZARD TITLE -->
+		
+		<div class="clearfix panelWithTabs"> <!-- TABBED PANEL -->
+			
+			<ul class="clearfix">
+				<li class="endDate selected">Products to End-Date</li>
+				<li class="add">Products to Add</li>
+			</ul>
+
+			<div class="endDatePanel panel clearfix">
+				<div class="btnGroup">
+					<button class="btn btn-primary addEndDateProduct">Select Products to End Date</button>
+					<button class="btn removeEndDates">Remove</button>
+				</div>
+
+				<!-- TABLE -->
+				<div class="tableBody endDateProducts">
+					<table>
+						<tr>
+							<td class="check"><input class="checkAll" type="checkbox"></td>
+							<td>NDC 11 <i class="fa fa-sort"></i></td>
+							<td>Description <i class="fa fa-sort"></i></td>
+							<td>End Quarter <i class="fa fa-sort"></i></td>
+							<td>Last Lot Expiration Date <i class="fa fa-sort"></i></td>
+							<td>Drug Category <i class="fa fa-sort"></i></td>
+						</tr>
+					</table>
+
+				</div><!-- /TABLE -->
+
+			</div>	
+
+			<div class="addPanel panel clearfix">
+				<div class="btnGroup">
+					<button class="btn btn-primary addAddProduct">Select Products to Add</button>
+					<button class="btn removeAdds">Remove</button>
+				</div>
+
+				<!-- TABLE -->
+				<div class="tableBody addProducts">
+					<table>
+						<tr>
+							<td class="check"><input class="checkAll" type="checkbox"></td>
+							<td>NDC 11 <i class="fa fa-sort"></i></td>
+							<td>Description <i class="fa fa-sort"></i></td>
+							<td>Start Quarter <i class="fa fa-sort"></i></td>
+							<td>End Quarter <i class="fa fa-sort"></i></td>
+							<td>URA Formula <i class="fa fa-sort"></i></td>
+							<td>Drug Category <i class="fa fa-sort"></i></td>
+						</tr>
+					</table>
+
+				</div><!-- /TABLE -->
+
+			</div>	
+
+		</div> <!-- /TABBED PANEL -->
+
+		<!-- WIZARD ACITON BUTTONS -->
+		<div class="fixedWizardActions">
+			<button class="btn back">Back</button>
+			<button class="btn btn-go saveProducts">Save &amp; Continue</button>
+		</div><!-- /WIZARD ACITON BUTTONS -->
+
+
+		</div><!-- /WIZARD BODY -->
+
+
+	
+	</div><!-- /RIGHT-PANEL -->
+</div><!-- /MAIN-BODY -->
+
+
+<footer class="clearfix">
+	<div class="logo pull-left"></div>
+	<div class="alerts pull-right"><i class="fa fa-bell-o"></i> 5 Alerts</div>
+
+</footer>
+
+
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="http://layout.jquery-dev.com/lib/js/jquery.layout-latest.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="../js/controller.js"></script>
+	<script type="text/javascript" src="../js/wizard.js"></script>
+	<script type="text/javascript" src="../js/massUpdate.js"></script>
+	<script type="text/javascript" src="../js/modals.js"></script>
+</body>
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RME LS Livespec</title>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/mCSB_buttons.png">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/fonts.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/modals.css">
+</head>
+<body>
+<div class="loader"></div>
+
+
+<!-- POPOVER WINDOWS -->
+
+<!-- new contract template -->
+<div class="actionGroupModal">
+	<div class="titleArea clearfix">
+		<h1>New Contract Template</h1>
+		<i class=" pull-right fa fa-times"></i>
+	</div>
+	<div class="modalBody clearfix">
+		<div class="leftInputs pull-left">
+			<label for="">Organization <i class="fa fa-asterisk asterisk"></i></label>
+			<input class="icon-input" type="text"><div class="icon-input-tag"><i class="fa fa-binoculars"></i></div>
+			<label for="">Domain</label>
+			<input class="select-input" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+			<label for="">Contract Type</label>
+			<input class="select-input" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+			<label for="">Sub Type</label>
+			<input class="select-input" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+		</div>
+
+		<div class="rightInputs pull-right">
+			<label for="">Distribution Method</label>
+			<input class="select-input" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+			<label for="">Generic/Brand</label>
+			<input class="select-input" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div><br>
+			<input class="input-check" type="checkbox"><label class="checkLabel" for="">Rebate Program Only</label><br>
+			<input class="input-check" type="checkbox"><label class="checkLabel" for="">Customer Required</label>
+		</div>
+	</div>
+	<div class="actionArea clearfix">
+		<button class="btn pull-left">Cancel</button>
+		<button class="btn btn-short-text btn-primary pull-right">OK</button>
+	</div>
+</div>
+
+<!-- search dropdown modal -->
+<div class="searchDropdown">
+	<div class="dropdownControl">
+		<div class="openExtendedArea clearfix">
+			<p class="openCaption pull-left">Open Extended Search <i class="fa fa-sort-desc"></i></p>
+			<i class="pull-right fa fa-times"></i>
+		</div>
+	</div>
+
+	<div class="inputArea clearfix">
+		<div class="leftInputs pull-left">
+			<div class="inputGroup">
+				<label for="">Customer ID</label>
+				<input class="input" type="text">
+				<label for="">Customer Name</label>
+				<input class="input" type="text">
+				<label for="">Customer COT</label>
+				<input class="select-input" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+				<label for="">Products</label>
+				<input class="icon-input" type="text"><div class="icon-input-tag"><i class="fa fa-binoculars"></i></div>
+				<label for="">Organizations</label>
+				<input class="icon-input" type="text"><div class="icon-input-tag"><i class="fa fa-binoculars"></i></div>
+				<input class="input-check" type="checkbox"><label class="checkLabel" for="">Only</label>
+			</div>
+			<div class="inputGroup">
+				<label for="">Status</label>
+				<input class="select-input" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div>
+				<label for="">Rebate Program Type</label>
+				<input class="icon-input" type="text"><div class="icon-input-tag"><i class="fa fa-binoculars"></i></div>
+				<label for="">Effective Date</label>
+				
+				<div class="date-range-input-div">
+				<input class="icon-input" placeholder="Start Date" type="text"><div class="icon-input-tag"><i class="fa fa-calendar"></i></div> to <input class="icon-input" placeholder="End Date" type="text"><div class="icon-input-tag"><i class="fa fa-calendar"></i></div>
+				</div>
+				
+				<div class="date-range-input-div">
+				<label for="">Expire Date</label>
+				<input class="icon-input" placeholder="Start Date" type="text"><div class="icon-input-tag"><i class="fa fa-calendar"></i></div> to <input class="icon-input" placeholder="End Date" type="text"><div class="icon-input-tag"><i class="fa fa-calendar"></i></div>
+				</div>
+			</div>
+
+
+		</div>
+		
+		<div class="rightInputs pull-right">
+			<div class="inputGroup">
+				<label for="">Contract ID</label>
+				<input class="input" type="text">
+				<label for="">Contract Name</label>
+				<input class="input" type="text">
+				<label for="">Contract Type</label>
+				<input class="input" type="text">
+				<label for="">Domain</label>
+				<input class="input" type="text">
+			</div>
+		</div>
+	</div>
+
+
+	<div class="btnArea clearfix">
+		<button class="pull-left search-btn-static btn btn-primary"><i class="fa fa-search"></i></button>
+		<button class="btn pull-right">Save as</button>
+		<button class="btn pull-right">Clear</button>
+	</div>
+</div>
+
+
+<!-- list sort popover -->
+<div class="list-sort-popover">
+	<nav>
+		<a data-type="config" href="#">50</a>
+		<a data-type="info" href="#">100</a>
+		<a data-type="remove" href="#">250</a>
+		<a data-type="remove" href="#">500</a>
+	</nav>
+</div>
+
+<!-- top nav dropdown -->
+<div class="top-nav-dropdown">
+	<nav>
+		<a data-type="config" href="#">Contracts</a>
+		<a data-type="info" href="#">Contract Templates</a>
+		<a data-type="remove" href="#">Mass Updates</a>
+		<a data-type="remove" href="#">Mass Updates Imports</a>
+		<a data-type="config" href="#">Medicaid Programs</a>
+		<a data-type="info" href="#">Price Monitoring</a>	
+	</nav>
+</div>
+
+<!--  /POPOVER WINDOWS -->
+
+
+<!-- TOP NAV -->
+<div class="topNav clearfix">
+	<ul class="nav clearfix">
+		<li class="menu"><i class="fa fa-reorder"></i></li>
+		<li class="back"><i class="fa fa-long-arrow-left"></i></li>
+		<li class="fwd disabled"><i class="fa fa-long-arrow-right"></i></li>
+		<li class="refresh"><i class="fa fa-refresh"></i></li>
+		<li class="home active"><i class="fa fa-home"></i></li>
+		<li class="config drop">Configuration <i class="fa fa-caret-down"></i></li>
+		<li class="customers drop">Customers <i class="fa fa-caret-down"></i></li>
+		<li class="products drop">Products <i class="fa fa-caret-down"></i></li>
+		<li class="pricing drop">Pricing <i class="fa fa-caret-down"></i></li>
+		<li class="contracts drop selected">Contracts <i class="fa fa-caret-down"></i></li>
+		<li class="compliance drop">Compliance <i class="fa fa-caret-down"></i></li>
+		<li class="sales drop">Sales <i class="fa fa-caret-down"></i></li>
+		<li class="external drop">External Sales <i class="fa fa-caret-down"></i></li>
+		<li class="extra drop">Extra <i class="fa fa-caret-down"></i></li>
+		<li class="user drop"><p>Alex Sawsienowicz</p> <i class="fa fa-caret-down"></i></li>
+		<li class="help active"><i class="fa fa-support"></i></li>
+	</ul>
+</div>
+<!-- /TOP NAV -->
+
+<!-- BREADCRUMBS -->
+<div class="breadcrumb clearfix">
+	<ul class="crumbs clearfix">
+		<li>Contracts Folder<i class="fa fa-angle-right"></i></li>
+		<li>Root Organization<i class="fa fa-angle-right"></i></li>
+		<li>Trinity Contract 2<i class="fa fa-angle-right"></i></li>
+		<li>00000261 (Draft)</li> 
+	</ul>
+
+
+	<div class="tableNav clearfix"><!-- TABLE NAV BAR -->
+
+		<div class="tableActionButtons btn-group pull-right">
+			<button class="table-btn"><i class="fa fa-print"></i></button>
+			<button class="table-btn disabled"><i class="fa fa-cloud-download"></i></button>
+			<button class="table-btn disabled"><i class="fa fa-cloud-upload"></i></button>
+		</div>
+
+	</div><!-- /TABLE NAV BAR -->
+	
+</div>
+<!-- /BREADCRUMBS -->
+
+	<div class="mainBody clearfix"><!-- MAIN-BODY -->
+	
+	<div class="leftPanel ui-layout-west pull-left"><!-- LEFT-PANEL -->
+		<div class="section section1">
+			<h2><i class="fa fa-arrow-circle-o-up"> </i>CONTRACT TASKS</h2>
+			<ul class="sectionActions">
+				<li><i class="fa fa-save"></i>Save</li>
+				<li><i class="fa fa-save"></i>Save As...</li>
+				<li><i class="fa fa-times"></i>Terminate</li>
+				<li><i class="fa fa-sign-in"></i>Submit</li>
+				<li><i class="fa fa-stethoscope"></i>Validate</li>
+				<li><i class="fa fa-bell-o"></i>Update Pricing Alerts</li>
+				<li><i class="fa fa-bell-slash-o"></i>Clear Pricing Alerts</li>
+			</ul>
+			<div class="expandSectionActions">More <i class="fa fa-caret-down"></i></div>
+		</div>
+		<div class="section section2">
+			<h2><i class="fa fa-arrow-circle-o-up"> </i>CONTRACT FOLDERS</h2>
+			<div class="subsection">
+				<h3 class="active"><i class="fa fa-caret-down"></i>Contracts</h3>
+				<ul>
+					<li>My Contracts</li>
+					<li>Active</li>
+					<li>Draft</li>
+					<li>Approval Pending</li>
+				</ul>
+			</div>
+			<div class="subsection">
+				<h3><i class="fa fa-caret-right"></i>Contract Templates</h3>
+				<ul>
+					<li>My Templates</li>
+					<li>My Templates</li>
+					<li>Draft Templates</li>
+				</ul>
+			</div>
+			<div class="subsection">
+				<h3 class="noChildren"></i>Mass Updates</h3>
+			</div>
+			<div class="subsection">
+				<h3><i class="fa fa-caret-right"></i>Mass Updates Imports</h3>
+				<ul>
+					<li>Scheduled Imports</li>
+					<li>Run Details</li>
+				</ul>
+			</div>
+			<div class="subsection">
+				<h3 class="noChildren"></i>Medicaid Programs</h3>
+			</div>
+		</div>
+		<div class="section section3">
+			<h2><i class="fa fa-arrow-circle-o-down"> </i>DETAILS</h2>
+		</div>
+	</div><!-- /LEFT-PANEL -->
+
+	
+
+		<div class="rightPanel clearfix ui-layout-center"><!-- RIGHT-PANEL -->
+
+
+		<div class="pull-left infoDiv leftInfo">
+			<h2>CONTRACT INFORMATION</h2>
+			<table>
+				<tr>
+					<td>Name:</td>
+					<td><input type="" class="input update"></td>
+				</tr>
+				<tr>
+					<td>Contract value:</td>
+					<td><input type="" class="input update"></td>
+				</tr>
+				<tr>
+					<td>Contract ID:</td>
+					<td>2000023387 - 005</td>
+				</tr>
+				<tr>
+					<td>Alternate contract ID:</td>
+					<td><input type="" class="input update"></td>
+				</tr>
+				<tr>
+					<td>Parent Contract ID:</td>
+					<td><input class="icon-input update" placeholder="Search" type="text"><div class="icon-input-tag"><i class="fa fa-binoculars"></i></td>
+				</tr>
+				<tr>
+					<td>Customer Contract ID:</td>
+					<td><input type="" class="input update"></td>
+				</tr>
+				<tr>
+					<td>Type:</td>
+					<td>Commercial</td>
+				</tr>
+				<tr>
+					<td>Contract SubType:</td>
+					<td><input class="select-input update" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div></td>
+				</tr>
+				<tr>
+					<td>Domain:</td>
+					<td><input class="select-input update" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div></td>
+				</tr>
+
+				<tr>
+					<td>Generic/Brand:</td>
+					<td><input class="select-input update" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div></td>
+				</tr>
+				<tr>
+					<td>Status:</td>
+					<td>Draft</td>
+				</tr>
+				<tr>
+					<td>Organization:</td>
+					<td>Root Organization</td>
+				</tr>
+				<tr>
+					<td>Time Zone:</td>
+					<td>(GMT - 08:00) America/Log_Angeles, Pacific Standard Time</td>
+				</tr>
+				<tr>
+					<td>Currency:</td>
+					<td><input class="select-input update" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div></td>
+				</tr>
+				<tr>
+					<td>Locale:</td>
+					<td><input class="select-input update" type="text"><div class="select-input-tag"><i class="fa fa-sort"></i></div></td>
+				</tr>
+				<tr>
+					<td>Active Version:</td>
+					<td>N/A</td>
+				</tr>
+			</table>
+		</div>
+		<div class="pull-left infoDiv rightInfo">
+			<h2>USERS</h2>
+			<table>
+				<tr>
+					<td>Author:</td>
+					<td><input class="icon-input update" placeholder="Search" type="text"><div class="icon-input-tag"><i class="fa fa-binoculars"></i></div></td>
+				</tr>
+				<tr>
+					<td>Additional Delegate:</td>
+					<td><input class="icon-input update" placeholder="Search" type="text"><div class="icon-input-tag"><i class="fa fa-binoculars"></i></div></td>
+				</tr>
+			</table>
+			<h2>OFFER TERMS</h2>
+			<table>
+				<tr>
+					<td>Author</td>
+					<td><input class="icon-input update" placeholder="End Date" type="text"><div class="icon-input-tag"><i class="fa fa-calendar"></i></div></td>
+				</tr>
+				<tr>
+					<td>Sent for Signature:</td>
+					<td><input class="icon-input update" placeholder="End Date" type="text"><div class="icon-input-tag"><i class="fa fa-calendar"></i></div></td>
+				</tr>
+				<tr>
+					<td>Signature due by:</td>
+					<td><input class="icon-input update" placeholder="End Date" type="text"><div class="icon-input-tag"><i class="fa fa-calendar"></i></div></td>
+				</tr>
+				<tr>
+					<td>Date of signature:</td>
+					<td><input class="icon-input update" placeholder="End Date" type="text"><div class="icon-input-tag"><i class="fa fa-calendar"></i></div></td>
+				</tr>
+				<tr>
+					<td>Signed document received:</td>
+					<td><input class="icon-input update" placeholder="End Date" type="text"><div class="icon-input-tag"><i class="fa fa-calendar"></i></div></td>
+				</tr>
+				<tr>
+					<td>Term:</td>
+					<td><input type="" class="input update"></td>
+				</tr>
+			</table>
+			<h2>CONTRACT TERM</h2>
+			<table>
+				<tr>
+					<td>Start Date:</td>
+					<td><div class="input-and-btn"><input class="icon-input" placeholder="End Date" type="text"><div class="icon-input-tag"><i class="fa fa-calendar"></i></div><button class="btn btn-go">Update</button></div></td>
+				</tr>
+				<tr>
+					<td>End date:</td>
+					<td><div class="input-and-btn"><input class="icon-input" placeholder="End Date" type="text"><div class="icon-input-tag"><i class="fa fa-calendar"></i></div><button class="btn btn-go">Update</button></div></td>
+				</tr>
+				<tr>
+					<td>Term:</td>
+					<td><input type="" class="input update"></td>
+				</tr>
+			</table>
+			<h2>COMMENTS</h2>
+			<table>
+				<tr>
+					<td>Section Comments:</td>
+					<td>No</td>
+				</tr>
+			</table>
+		</div>
+	
+	</div><!-- /RIGHT-PANEL -->
+</div><!-- /MAIN-BODY -->
+
+
+
+
+
+
+
+
+
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+ <script src="http://layout.jquery-dev.com/lib/js/jquery.layout-latest.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script type="text/javascript" src="js/controller.js"></script>
+  <script type="text/javascript" src="js/modals.js"></script>
+ <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

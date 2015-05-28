@@ -1,0 +1,96 @@
+@import 'main';
+
+.product-modal{
+	z-index: 500;
+	overflow: auto;
+	display:none;
+
+	& .close {
+		cursor: pointer;
+	}
+}
+.picture-div{
+margin-top: 15%;
+width: 40%;
+
+	& img{
+		width: 100%;
+	}
+}
+.product-info-div{
+width: 50%;
+padding-right: 5%;
+margin-bottom:10px;
+overflow: auto;
+height: 400px;
+
+	& .desc{
+	}
+	& .caps{
+		margin-top: 10px;
+		font-weight: 800;
+	}
+	& .caps-text{
+		& li {
+			list-style-type: none;
+			margin-top:10px;
+			&:first-child{
+				margin-top:40px;
+			}
+		}
+	}
+	& .learn-more{
+			& a{
+				color: $blue;
+				font-size: 12px;
+				text-decoration: none;
+			}
+
+	}
+
+}
+.product-info-table{
+		margin-top: 20px !important;
+		margin-left: 40px;
+		width: 50%;
+		border-collapse: collapse;
+		border: none;
+		position: relative;
+		left: 3%;
+
+
+		& tr{
+				background: $light-grey;
+				height: 40px;
+		}
+		& tr:first-child td {
+				color: $grey;
+				font-size: 12px;
+
+			}
+		& tr:last-child {
+				border-top: 1px solid white;
+
+			}
+		& td{
+			padding-left: 15px;
+
+		}
+		& td:nth-child(1){
+			width: 30%;
+		}
+		& td:nth-child(2){
+			width: 30%;
+		}
+		& td:nth-child(3){
+			width: 30%;
+		}
+		& .input{
+			width: 30px;
+		}
+
+	}
+	.add-to-quote-btn {
+			margin-top:15px !important;
+			margin-right: 62px !important;
+	}

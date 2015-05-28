@@ -1,0 +1,275 @@
+.btn{
+	@include greyGradient;
+	border: 1px solid $lightGrey;
+	border-radius: 2px;
+	padding: 5px 14px 7px 14px;
+	margin: 10px 3px;
+	font-size: 14px;
+	cursor: pointer;
+	color: $textGrey;
+	&.hover, &:hover {
+	@include greyGradientHover;
+	}
+	&.active, &:active {
+	@include greyGradient;
+	}
+	&.disabled{
+		&:hover, &:active{
+			@include greyGradient;
+		}
+	}
+	&.btn-md{
+		font-size: 12px;
+		padding: 4px 10px 5px 10px;
+	}
+	&.btn-sm{
+		font-size: 12px;
+		padding: 3px 8px 4px 8px;
+	}
+}
+.btn-short-text {
+	padding: 3px 22px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 10px 3px;
+	font-size:16px;
+}
+.table-btn{
+	@include greyGradient;
+	border: 1px solid $lightGrey;
+	padding: 5px 14px;
+	padding-bottom: 7px;
+	margin: 10px 3px;
+	font-size: 14px;
+	cursor: pointer;
+	&.hover, &:hover {
+	@include greyGradientHover;
+	}
+	&.active, &:active {
+	@include greyGradient;
+	}
+	&.disabled{
+		&:hover, &:active{
+			@include greyGradient;
+		}
+	}
+	&.btn-md{
+		font-size: 12px;;
+		padding: 4px 10px 5px 10px;
+	}
+	&.btn-sm{
+		font-size: 12px;
+		padding: 3px 8px 4px 8px;
+	}
+}
+.table-embed-btn {
+	@include greyGradient;
+	border: 1px solid $lightGrey;
+	padding: 3px 8px;
+	padding-bottom: 5px;
+	margin: 10px 3px;
+	font-size: 13px;
+	cursor: pointer;	
+	&.hover, &:hover {
+	@include greyGradientHover;
+	}
+	&.active, &:active {
+	@include greyGradient;
+	}
+	&.disabled{
+		&:hover, &:active{
+			@include greyGradient;
+		}
+	}
+}
+.btn-primary{
+	@include blueGradient;
+	border: 1px solid $blue;
+	color: #FFFFFF;
+	&.hover, &:hover {
+	@include blueGradientHover;
+	}
+	&.active, &:active {
+	@include blueGradient;
+	}
+	&.disabled{
+		&:hover, &:active{
+			@include blueGradient;
+		}
+	}
+}
+.btn-go{
+	@include greenGradient;
+	color: #FFFFFF;
+	border: 1px solid $green;
+	&.hover, &:hover {
+	@include greenGradientHover;
+	}
+	&.active, &:active {
+	@include greenGradient;
+	}
+	&.disabled{
+		&:hover, &:active{
+			@include greenGradient;
+		}
+	}
+}
+.btn-stop{
+	@include redGradient;
+	color: #FFFFFF;
+	border: 1px solid $red;
+	&.hover, &:hover {
+	@include redGradientHover;
+	}
+	&.active, &:active {
+	@include redGradient;
+	}
+	&.disabled{
+		&:hover, &:active{
+			@include redGradient;
+		}
+	}
+}
+.more-btn i {
+	position: relative;
+	top: -3px;
+}
+.search-btn{
+	border: 1px solid $brightBlue;
+	border-left: none;
+	background: $brightBlue;
+	padding: 5px 20px 6px 20px;
+	float: left;
+	margin:0px;
+	cursor: pointer;
+	margin-right: 20px;
+}
+.search-btn-static{
+	border: 1px solid $brightBlue;
+	background: $brightBlue;
+	padding: 5px 20px;
+}
+.search-btn i{
+	color: #FFFFFF;
+	font-size: 17px;
+	font-weight: 800;
+}
+.search-btn-static i{
+	color: #FFFFFF;
+	font-size: 17px;
+	font-weight: 800;
+}
+.medium-search-btn {
+	border: 1px solid #18A2D2;
+	border-left: none;
+	background: #18A2D2;
+	padding: 5px 9px 6px 9px;
+	float: left;
+	margin: 0px;
+	cursor: pointer;
+}
+.search-btn i, .medium-search-btn i{
+	color: #FFFFFF;
+	font-size: 17px;
+	font-weight: 800;
+}
+.btn-group {
+	margin: 0px 10px;
+	& .btn {
+		margin: 0px;
+	}
+	& .table-btn {
+		@include greyGradient;
+		border: 1px solid $lightGrey;
+		border-left:none;
+		margin: 0px;
+		float: left;
+		&.hover, &:hover {
+		@include greyGradientHover;
+		}
+		&.active, &:active {
+		@include greyGradient;
+		}
+		&.disabled{
+			&:hover, &:active{
+				@include greyGradient;
+			}
+		}
+		& i {
+			color: $textGrey;
+		}
+		&:last-child {
+			border-right: 1px solid $lightGrey !important;
+			-webkit-border-top-right-radius: 2px;
+			-webkit-border-bottom-right-radius: 2px;
+			-moz-border-radius-topright: 2px;
+			-moz-border-radius-bottomright: 2px;
+			border-top-right-radius: 2px;
+			border-bottom-right-radius: 2px;
+		}
+		&:nth-child(2){
+			border-left: 1px solid $lightGrey !important;
+			-webkit-border-top-left-radius: 2px;
+			-webkit-border-bottom-left-radius: 2px;
+			-moz-border-radius-topleft: 2px;
+			-moz-border-radius-bottomleft: 2px;
+			border-top-left-radius: 2px;
+			border-bottom-left-radius: 2px;
+		}
+	}
+	& .table-embed-btn {
+		margin: 0px;
+		float: left;
+		border-left: none;
+		border-right: 1px solid $lightGrey;
+		&:nth-child(2){
+			border-left: 1px solid $lightGrey !important;
+		}
+	}
+}
+.pagination-group {
+	margin-right: 20px;
+	margin-left: 20px;
+	width: 275px;
+	color: $textGrey;
+	& i {
+		color: $textGrey;
+		}
+	& .btn:nth-child(3){
+		position: relative;
+		left: -5px;
+	}
+	& p.pagination-text {
+		display:inline-block;
+		position: relative;
+		font-size: 12px;
+		font-weight: 600;
+		margin-right: 5px;
+		color: $textGrey;
+	}
+	& p.pagination-length-text {
+		display:inline-block;
+		font-size: 12px;
+		font-weight: 600;
+		position: relative;
+		margin-right: 5px;
+		margin-left: 10px;
+		color: $textGrey;
+	}
+	& .listBtn {
+		background-color: white;
+		color: $textGrey;
+		font-size: 12px;
+		width: 55px;
+		font-weight: 600;
+		display:inline-block;
+		padding: 7px 7px 6px 7px !important;
+		& i {
+			position: relative;
+			top: -3px;
+			left: 6px
+
+		}
+	}
+}
+

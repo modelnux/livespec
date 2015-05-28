@@ -1,0 +1,818 @@
+/*			COLORS				*/
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(../img/loader.gif) 50% 50% no-repeat white; }
+
+/*		HELPER CLASSES			*/
+* {
+  font-family: "Helvetica Neue";
+  font-weight: 500;
+  color: #666666;
+  margin: 0px;
+  padding: 0px;
+  font-size: 14px; }
+  *:active {
+    outline: none !important; }
+  *:focus {
+    outline: none !important; }
+
+html {
+  height: 100%;
+  min-width: 1460px; }
+
+body {
+  height: 100%;
+  margin: auto; }
+
+.pull-right {
+  float: right; }
+
+.pull-left {
+  float: left; }
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both; }
+
+.btn {
+  background: #F4F4F4;
+  border: 1px solid #CCCCCC;
+  padding: 3px 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin: 10px 3px;
+  font-size: 14px;
+  cursor: pointer; }
+
+.btn-short-text {
+  padding: 3px 22px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin: 10px 3px;
+  font-size: 14px; }
+
+.table-btn {
+  background: #F4F4F4;
+  border: 1px solid #CCCCCC;
+  padding: 5px 14px;
+  padding-bottom: 7px;
+  margin: 10px 3px;
+  font-size: 14px;
+  cursor: pointer; }
+
+.table-embed-btn {
+  background: #F4F4F4;
+  border: 1px solid #CCCCCC;
+  padding: 3px 8px;
+  padding-bottom: 5px;
+  margin: 10px 3px;
+  font-size: 13px;
+  cursor: pointer; }
+
+.btn-primary {
+  background: #18A2D2;
+  color: #FFFFFF;
+  border: 1px solid #18A2D2; }
+
+.btn-go {
+  background-color: #80C536;
+  color: #FFFFFF;
+  border: 1px solid #80C536; }
+
+.btn-stop {
+  background-color: #D0021B;
+  color: #FFFFFF;
+  border: 1px solid #D0021B; }
+
+.more-btn i {
+  position: relative;
+  top: -3px; }
+
+.search-btn {
+  border: 1px solid #18A2D2;
+  border-left: none;
+  background: #18A2D2;
+  padding: 5px 20px;
+  float: left;
+  margin: 0px;
+  cursor: pointer; }
+
+.search-btn-static {
+  border: 1px solid #18A2D2;
+  background: #18A2D2;
+  padding: 5px 20px; }
+
+.search-btn i {
+  color: #FFFFFF;
+  font-size: 17px;
+  font-weight: 800; }
+
+.search-btn-static i {
+  color: #FFFFFF;
+  font-size: 17px;
+  font-weight: 800; }
+
+.search-input {
+  width: 480px;
+  font-size: 12px;
+  font-weight: 500;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-right: none;
+  padding: 7px 12px;
+  float: left; }
+
+.input, textarea {
+  border: 1px solid #CCCCCC;
+  padding: 6px;
+  font-weight: 300;
+  background-color: white;
+  width: 230px; }
+
+.input-filter {
+  width: 60% !important;
+  padding: 6px;
+  font-weight: 300;
+  border: 1px solid #CCCCCC;
+  background: white; }
+
+.update {
+  width: 200px; }
+
+.icon-input {
+  border: 1px solid #CCCCCC;
+  display: inline-block !important;
+  border-right: none;
+  padding: 6px;
+  width: 202px !important;
+  font-weight: 300;
+  background-color: white; }
+  .icon-input.update {
+    width: 171px !important; }
+  .icon-input.workbook {
+    width: 100px !important; }
+
+.icon-input-tag {
+  border: 1px solid #CCCCCC;
+  display: inline-block;
+  padding: 6px 4px;
+  background-color: white; }
+  .icon-input-tag i {
+    padding: 2px 3px 1px 3px; }
+
+.select-input {
+  border: 1px solid #CCCCCC;
+  display: inline-block !important;
+  border-right: none;
+  padding: 6px;
+  width: 201px !important;
+  font-weight: 300;
+  background-color: white; }
+  .select-input.update {
+    width: 172px !important; }
+  .select-input.workbook {
+    width: 100px !important; }
+  .select-input.filterable {
+    width: 14px !important;
+    font-weight: 700;
+    line-height: 0px; }
+
+.select-input-tag {
+  border: 1px solid #CCCCCC;
+  border-left: none;
+  display: inline-block;
+  padding: 6px;
+  background-color: white; }
+  .select-input-tag i {
+    padding: 2px 5px 1px 3px; }
+
+.filter-input-tag {
+  border: 1px solid #CCCCCC;
+  border-left: none;
+  display: inline-block;
+  padding: 4px;
+  background-color: white; }
+  .filter-input-tag i {
+    padding: 2px 5px 1px 3px; }
+
+.date-range-input-div .icon-input {
+  width: 70px !important; }
+
+.asterisk {
+  font-size: 6px;
+  position: relative;
+  top: -6px;
+  left: -2px;
+  color: #FF8300; }
+
+.disabled {
+  opacity: .5;
+  cursor: default; }
+
+.btn-group .btn {
+  margin: 0px;
+  float: left; }
+.btn-group .table-btn {
+  margin: 0px;
+  float: left;
+  border-left: none;
+  border-right: 1px solid #CCCCCC; }
+  .btn-group .table-btn:nth-child(1) {
+    border-left: 1px solid #CCCCCC !important; }
+.btn-group .table-embed-btn {
+  margin: 0px;
+  float: left;
+  border-left: none;
+  border-right: 1px solid #CCCCCC; }
+  .btn-group .table-embed-btn:nth-child(2) {
+    border-left: 1px solid #CCCCCC !important; }
+
+.inline-icon {
+  padding: 0 4px; }
+
+.input-and-btn {
+  margin: 0px;
+  padding: 0px; }
+  .input-and-btn .icon-input {
+    width: 77px !important; }
+  .input-and-btn button {
+    margin: 0px;
+    margin-left: 15px; }
+
+.pill {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: none;
+  padding: 3px 13px;
+  position: relative;
+  top: -3px; }
+
+.pill-draft {
+  background: #F4F4F4;
+  color: #FFFFFF;
+  position: relative;
+  left: 25%; }
+
+.pill-warning {
+  background: #FF8300;
+  color: #FFFFFF;
+  margin-left: 5px; }
+
+.quote-summary-btn i {
+  position: relative;
+  top: -3px; }
+
+.submit-for-approval-btn i {
+  position: relative;
+  top: -3px;
+  color: white; }
+
+.input-check {
+  display: inline-block !important;
+  width: 20px !important; }
+
+input:disabled {
+  opacity: .5;
+  background: #F4F4F4; }
+
+.search-field {
+  width: 240px; }
+
+.tableBody, .workBookTableBody {
+  width: 100%; }
+  .tableBody table, .workBookTableBody table {
+    width: 100%;
+    border-collapse: collapse; }
+    .tableBody table tr, .workBookTableBody table tr {
+      cursor: default !important;
+      border-bottom: 1px solid #CCCCCC;
+      background-color: white; }
+      .tableBody table tr .fa-sort, .workBookTableBody table tr .fa-sort {
+        opacity: .3; }
+      .tableBody table tr td, .workBookTableBody table tr td {
+        padding: 10px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 170px; }
+      .tableBody table tr td.id, .workBookTableBody table tr td.id {
+        color: #18A2D2; }
+        .tableBody table tr td.id:hover, .workBookTableBody table tr td.id:hover {
+          text-decoration: underline;
+          cursor: pointer; }
+    .tableBody table tr:first-child, .workBookTableBody table tr:first-child {
+      background-color: #D1ECF6;
+      border-top: 1px solid #18A2D2;
+      border-bottom: 1px solid #18A2D2; }
+      .tableBody table tr:first-child:hover, .workBookTableBody table tr:first-child:hover {
+        background-color: #D1ECF6 !important; }
+      .tableBody table tr:first-child:hover td, .workBookTableBody table tr:first-child:hover td {
+        background-color: #D1ECF6 !important; }
+      .tableBody table tr:first-child td:nth-child(2), .workBookTableBody table tr:first-child td:nth-child(2) {
+        color: #666666; }
+        .tableBody table tr:first-child td:nth-child(2):hover, .workBookTableBody table tr:first-child td:nth-child(2):hover {
+          text-decoration: none; }
+  .tableBody tr:hover td, .workBookTableBody tr:hover td {
+    background: #FCFCFC; }
+    .tableBody tr:hover td .fa-edit, .workBookTableBody tr:hover td .fa-edit {
+      color: #FCFCFC; }
+  .tableBody tr:hover .editableIcon:hover .fa-edit, .workBookTableBody tr:hover .editableIcon:hover .fa-edit {
+    color: #18A2D2 !important; }
+  .tableBody .pagination-group, .workBookTableBody .pagination-group {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px; }
+    .tableBody .pagination-group p.pagination-text, .workBookTableBody .pagination-group p.pagination-text {
+      float: left;
+      position: relative;
+      top: 7px;
+      left: -9px;
+      font-size: 12px;
+      font-weight: 600; }
+    .tableBody .pagination-group p.pagination-length-text, .workBookTableBody .pagination-group p.pagination-length-text {
+      float: left;
+      font-size: 12px;
+      font-weight: 600;
+      position: relative;
+      top: 7px;
+      margin-right: 3px;
+      margin-left: 10px; }
+    .tableBody .pagination-group .listBtn, .workBookTableBody .pagination-group .listBtn {
+      background-color: white;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 7px 7px 6px 7px; }
+      .tableBody .pagination-group .listBtn i, .workBookTableBody .pagination-group .listBtn i {
+        position: relative;
+        top: -2px; }
+
+.validationWarningTable tr:first-child {
+  background-color: #FFF0D6 !important;
+  border-top: none !important;
+  border-bottom: none !important; }
+  .validationWarningTable tr:first-child:hover {
+    background-color: #FFF0D6 !important; }
+
+/*		DOCUMENT SPECIFIC CLASSES		*/
+/*		DOCUMENT SPECIFIC CLASSES		*/
+/*		DOCUMENT SPECIFIC CLASSES		*/
+.topNav {
+  width: 100%; }
+  .topNav .nav {
+    list-style-type: none;
+    background-color: #F4F4F4; }
+    .topNav .nav li {
+      border-top: 4px solid transparent;
+      display: inline-block;
+      float: left;
+      padding: 10px 17px; }
+      .topNav .nav li.logo img {
+        height: 18px; }
+      .topNav .nav li.active i {
+        color: #FF8300;
+        font-size: 18px; }
+      .topNav .nav li.disabled i {
+        color: #AAAAAA; }
+      .topNav .nav li.drop {
+        border-bottom: 4px solid transparent;
+        cursor: pointer; }
+        .topNav .nav li.drop:hover {
+          border-bottom: 4px solid #0069AA;
+          color: #0069AA; }
+        .topNav .nav li.drop.selected {
+          border-bottom: 4px solid #0069AA;
+          color: #0069AA; }
+          .topNav .nav li.drop.selected i {
+            color: #0069AA; }
+        .topNav .nav li.drop i {
+          font-size: 14px; }
+      .topNav .nav li i {
+        font-size: 18px; }
+      .topNav .nav li.menu {
+        border-right: 1px solid #CCCCCC; }
+      .topNav .nav li.home {
+        border-left: 1px solid #CCCCCC;
+        border-right: 1px solid #CCCCCC; }
+      .topNav .nav li.user {
+        border-left: 1px solid #CCCCCC;
+        text-align: center; }
+        .topNav .nav li.user p {
+          height: 13px;
+          padding: 0px;
+          margin: 0px;
+          width: 98px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: inline-block; }
+    .topNav .nav .help {
+      float: right;
+      font-size: 18px;
+      height: 20px;
+      border-left: 1px solid #CCCCCC; }
+
+.breadcrumb {
+  border-bottom: 1px solid #F4F4F4; }
+  .breadcrumb .crumbs {
+    list-style-type: none;
+    display: inline-block; }
+    .breadcrumb .crumbs li {
+      font-size: 14px;
+      font-weight: 600;
+      float: left;
+      padding: 12px;
+      color: #0069AA; }
+      .breadcrumb .crumbs li i {
+        position: relative;
+        left: 14px;
+        font-weight: 800; }
+  .breadcrumb .tableNav {
+    display: inline-block;
+    float: right;
+    margin-top: 7px;
+    margin-right: 20px; }
+
+.searchArea {
+  width: 1102px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #FCFCFC;
+  display: inline-block; }
+  .searchArea .modalFilterArea {
+    padding: 0px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-left: 10px; }
+    .searchArea .modalFilterArea .searchInputPack {
+      width: 174px;
+      margin-right: .5px;
+      display: inline-block; }
+      .searchArea .modalFilterArea .searchInputPack.solo {
+        margin-right: 20px; }
+      .searchArea .modalFilterArea .searchInputPack.dateRange {
+        position: relative;
+        top: 10px;
+        margin-top: 0px; }
+        .searchArea .modalFilterArea .searchInputPack.dateRange p {
+          padding-top: 5px;
+          text-align: center;
+          font-size: 12px; }
+      .searchArea .modalFilterArea .searchInputPack .ui-widget-content {
+        width: 186px; }
+      .searchArea .modalFilterArea .searchInputPack label {
+        font-weight: 800;
+        display: block;
+        font-size: 11px; }
+      .searchArea .modalFilterArea .searchInputPack .select-input {
+        width: 130px !important; }
+      .searchArea .modalFilterArea .searchInputPack .input {
+        width: 155px; }
+    .searchArea .modalFilterArea .btn {
+      margin-bottom: 0px;
+      position: relative;
+      top: 5px; }
+    .searchArea .modalFilterArea .btn-primary {
+      margin-right: 10px; }
+
+.mainBody {
+  width: 100%;
+  height: 100%; }
+  .mainBody .leftPanel {
+    padding: 0px 0px 0px 0px !important;
+    overflow: hidden;
+    border: none !important;
+    margin-right: 10px;
+    width: 230px !important; }
+    .mainBody .leftPanel .section {
+      padding-bottom: 10px;
+      padding-right: 10px;
+      width: 260px;
+      border-bottom: 1px solid #CCCCCC; }
+      .mainBody .leftPanel .section h2 {
+        font-weight: 300;
+        padding: 10px 15px;
+        position: relative;
+        left: 5px; }
+        .mainBody .leftPanel .section h2 i {
+          position: relative;
+          left: -10px;
+          font-size: 18px; }
+      .mainBody .leftPanel .section .sectionActions {
+        list-style-type: none; }
+        .mainBody .leftPanel .section .sectionActions li {
+          padding-left: 36px;
+          padding-bottom: 12px;
+          font-weight: 500;
+          font-size: 13px;
+          cursor: pointer; }
+          .mainBody .leftPanel .section .sectionActions li .fa-flip-horizontal {
+            position: relative;
+            left: -11px; }
+          .mainBody .leftPanel .section .sectionActions li .fa-rotate-270 {
+            position: relative;
+            top: -6px;
+            left: -5px; }
+          .mainBody .leftPanel .section .sectionActions li:hover {
+            color: #FF8300; }
+            .mainBody .leftPanel .section .sectionActions li:hover i {
+              color: #FF8300; }
+          .mainBody .leftPanel .section .sectionActions li i {
+            padding-right: 10px;
+            font-size: 16px; }
+          .mainBody .leftPanel .section .sectionActions li.scoot-left {
+            position: relative;
+            left: -4px; }
+          .mainBody .leftPanel .section .sectionActions li.scoot-left2 {
+            position: relative;
+            left: -6px; }
+      .mainBody .leftPanel .section .subsection h3 {
+        cursor: pointer;
+        border-left: 3px solid transparent;
+        font-weight: 600;
+        margin-top: 20px; }
+        .mainBody .leftPanel .section .subsection h3.active {
+          border-left: 3px solid #0069AA;
+          color: #0069AA; }
+        .mainBody .leftPanel .section .subsection h3.noChildren {
+          padding-left: 19px; }
+        .mainBody .leftPanel .section .subsection h3 i {
+          padding: 0 5px; }
+      .mainBody .leftPanel .section .subsection ul {
+        padding-top: 10px;
+        width: 150px;
+        margin-left: 25px; }
+        .mainBody .leftPanel .section .subsection ul li {
+          list-style-type: none;
+          padding: 10px; }
+      .mainBody .leftPanel .section .subsection:first-child h3 {
+        margin-top: 0px; }
+      .mainBody .leftPanel .section .expandSectionActions {
+        padding-left: 62px;
+        font-size: 13px; }
+  .mainBody .rightPanel {
+    border: none !important;
+    padding: 0px !important;
+    width: 100%; }
+    .mainBody .rightPanel .searchInputPack {
+      background: #FCFCFC;
+      margin-top: 10px;
+      padding: 20px;
+      width: 239px;
+      margin-right: 20px;
+      display: inline-block; }
+      .mainBody .rightPanel .searchInputPack.solo {
+        margin-right: 20px; }
+      .mainBody .rightPanel .searchInputPack.dateRange {
+        position: relative;
+        top: 10px;
+        margin-top: 0px; }
+        .mainBody .rightPanel .searchInputPack.dateRange p {
+          padding-top: 5px;
+          text-align: center;
+          font-size: 12px; }
+      .mainBody .rightPanel .searchInputPack .ui-widget-content {
+        width: 186px; }
+      .mainBody .rightPanel .searchInputPack label {
+        font-weight: 800;
+        display: block;
+        font-size: 11px; }
+      .mainBody .rightPanel .searchInputPack .select-input {
+        width: 197px !important; }
+      .mainBody .rightPanel .searchInputPack .input {
+        width: 155px; }
+    .mainBody .rightPanel .tableNav {
+      display: inline-block;
+      padding: 10px;
+      position: relative;
+      top: 65px; }
+      .mainBody .rightPanel .tableNav .searchBarDiv .searchBarIcon {
+        position: relative;
+        top: 4px;
+        left: -85px;
+        color: #8E9090;
+        cursor: pointer; }
+      .mainBody .rightPanel .tableNav .tableActionButtons {
+        margin-left: 0px;
+        margin-right: 0px; }
+        .mainBody .rightPanel .tableNav .tableActionButtons .closeTable {
+          font-size: 25px;
+          padding: 20px; }
+      .mainBody .rightPanel .tableNav .pagination-group {
+        margin-right: 20px; }
+        .mainBody .rightPanel .tableNav .pagination-group p.pagination-text {
+          float: left;
+          position: relative;
+          top: 7px;
+          left: -9px;
+          font-size: 12px;
+          font-weight: 600; }
+        .mainBody .rightPanel .tableNav .pagination-group .btn:nth-child(3) {
+          border-right: 1px solid #CCCCCC !important; }
+        .mainBody .rightPanel .tableNav .pagination-group .btn:nth-child(1) {
+          border-left: 1px solid #CCCCCC !important; }
+        .mainBody .rightPanel .tableNav .pagination-group p.pagination-length-text {
+          float: left;
+          font-size: 12px;
+          font-weight: 600;
+          position: relative;
+          top: 7px;
+          margin-right: 3px;
+          margin-left: 10px; }
+        .mainBody .rightPanel .tableNav .pagination-group .listBtn {
+          background-color: white;
+          font-size: 12px;
+          font-weight: 600;
+          padding: 7px 7px 6px 7px; }
+      .mainBody .rightPanel .tableNav i.fa-sort-desc {
+        position: relative;
+        top: -3px;
+        padding-left: 5px; }
+      .mainBody .rightPanel .tableNav .listBtn {
+        margin-left: 5px; }
+      .mainBody .rightPanel .tableNav .moreBtn {
+        margin: 0px 3px;
+        margin-right: 119px;
+        padding: 6px 10px;
+        font-size: 14px; }
+        .mainBody .rightPanel .tableNav .moreBtn i {
+          font-size: 16px; }
+    .mainBody .rightPanel .tableBody, .mainBody .rightPanel .workBookTableBody {
+      width: 100%; }
+      .mainBody .rightPanel .tableBody table, .mainBody .rightPanel .workBookTableBody table {
+        width: 100%;
+        border-collapse: collapse; }
+        .mainBody .rightPanel .tableBody table tr, .mainBody .rightPanel .workBookTableBody table tr {
+          border-bottom: 1px solid #CCCCCC; }
+          .mainBody .rightPanel .tableBody table tr:hover, .mainBody .rightPanel .workBookTableBody table tr:hover {
+            background-color: #FCFCFC; }
+            .mainBody .rightPanel .tableBody table tr:hover td:nth-child(2), .mainBody .rightPanel .workBookTableBody table tr:hover td:nth-child(2) {
+              text-decoration: underline;
+              cursor: pointer; }
+          .mainBody .rightPanel .tableBody table tr td, .mainBody .rightPanel .workBookTableBody table tr td {
+            padding: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+            .mainBody .rightPanel .tableBody table tr td.analytics i, .mainBody .rightPanel .workBookTableBody table tr td.analytics i {
+              cursor: pointer;
+              color: #CCCCCC; }
+              .mainBody .rightPanel .tableBody table tr td.analytics i:hover, .mainBody .rightPanel .workBookTableBody table tr td.analytics i:hover {
+                color: #666666; }
+          .mainBody .rightPanel .tableBody table tr td.contractId, .mainBody .rightPanel .workBookTableBody table tr td.contractId {
+            color: #18A2D2; }
+            .mainBody .rightPanel .tableBody table tr td.contractId:hover, .mainBody .rightPanel .workBookTableBody table tr td.contractId:hover {
+              text-decoration: underline; }
+        .mainBody .rightPanel .tableBody table tr:first-child, .mainBody .rightPanel .workBookTableBody table tr:first-child {
+          background-color: #D1ECF6;
+          border-top: 1px solid #18A2D2;
+          border-bottom: 1px solid #18A2D2; }
+          .mainBody .rightPanel .tableBody table tr:first-child:hover, .mainBody .rightPanel .workBookTableBody table tr:first-child:hover {
+            background-color: #D1ECF6; }
+          .mainBody .rightPanel .tableBody table tr:first-child td:nth-child(2), .mainBody .rightPanel .workBookTableBody table tr:first-child td:nth-child(2) {
+            color: #666666; }
+            .mainBody .rightPanel .tableBody table tr:first-child td:nth-child(2):hover, .mainBody .rightPanel .workBookTableBody table tr:first-child td:nth-child(2):hover {
+              text-decoration: none; }
+    .mainBody .rightPanel .detailTable {
+      width: 98%; }
+      .mainBody .rightPanel .detailTable td.smallField input {
+        width: 90px !important; }
+      .mainBody .rightPanel .detailTable td {
+        height: 23px;
+        min-height: 23px !important;
+        padding: 4px !important; }
+        .mainBody .rightPanel .detailTable td.important {
+          color: #FF8300 !important; }
+        .mainBody .rightPanel .detailTable td .select-input {
+          width: 70px !important; }
+        .mainBody .rightPanel .detailTable td > i {
+          color: #0069AA;
+          cursor: pointer;
+          padding-left: 5px; }
+          .mainBody .rightPanel .detailTable td > i:hover {
+            color: #FF8300; }
+        .mainBody .rightPanel .detailTable td input {
+          padding: 2px; }
+        .mainBody .rightPanel .detailTable td .select-input-tag {
+          padding: 2px; }
+    .mainBody .rightPanel .workBookTableBody tr td:first-child {
+      color: #18A2D2; }
+    .mainBody .rightPanel .workBookTableBody tr:first-child td:first-child {
+      color: #666666; }
+    .mainBody .rightPanel .dataSource {
+      padding: 0px 40px; }
+      .mainBody .rightPanel .dataSource h2 {
+        font-size: 17px;
+        color: #666666;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        font-weight: 600; }
+      .mainBody .rightPanel .dataSource p.alert {
+        font-weight: 400; }
+        .mainBody .rightPanel .dataSource p.alert i {
+          color: #FF8300;
+          font-size: 18px;
+          padding-right: 5px; }
+      .mainBody .rightPanel .dataSource div {
+        padding: 10px 20px; }
+        .mainBody .rightPanel .dataSource div p {
+          display: inline-block; }
+        .mainBody .rightPanel .dataSource div button {
+          float: right;
+          position: relative;
+          top: -20px;
+          left: 20px; }
+    .mainBody .rightPanel .infoDiv {
+      padding: 0px 0px 40px 40px; }
+      .mainBody .rightPanel .infoDiv h2 {
+        font-size: 17px;
+        color: #18A2D2;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-weight: 600;
+        margin-bottom: 0px; }
+      .mainBody .rightPanel .infoDiv .infoTable tr td {
+        padding: 0px 0px 4px 0px;
+        font-size: 14px;
+        color: #666666; }
+        .mainBody .rightPanel .infoDiv .infoTable tr td:first-child, .mainBody .rightPanel .infoDiv .infoTable tr td:nth-child(3) {
+          text-align: right;
+          width: 130px;
+          padding-right: 20px;
+          color: #8E9090; }
+        .mainBody .rightPanel .infoDiv .infoTable tr td:nth-child(2) {
+          color: black;
+          text-align: left;
+          width: 300px;
+          white-space: nowrap; }
+        .mainBody .rightPanel .infoDiv .infoTable tr td > i {
+          color: #0069AA;
+          cursor: pointer;
+          padding-left: 5px; }
+          .mainBody .rightPanel .infoDiv .infoTable tr td > i:hover {
+            color: #FF8300; }
+          .mainBody .rightPanel .infoDiv .infoTable tr td > i.fa-money {
+            font-size: 17px;
+            position: relative;
+            top: 2px; }
+        .mainBody .rightPanel .infoDiv .infoTable tr td.important {
+          color: #FF8300 !important; }
+      .mainBody .rightPanel .infoDiv .infoTable tr.commentRow {
+        vertical-align: top; }
+        .mainBody .rightPanel .infoDiv .infoTable tr.commentRow textarea {
+          width: 683px;
+          height: 100px; }
+
+.ui-layout-resizer-west {
+  left: 230px !important; }
+
+.ui-layout-resizer-west-closed {
+  left: 0px !important; }
+
+.mCSB_draggerRail, .mCSB_2_scrollbar_vertical, .mCustomScrollbar {
+  display: none !important; }
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding: 10px 20px;
+  height: 20px;
+  background: #0069AA;
+  background-image: url(../img/bg-ls-large.png);
+  background-size: 12%;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .footer .copyright {
+    text-align: center;
+    position: relative;
+    left: -100px;
+    color: white; }
+  .footer .alerts {
+    color: white;
+    padding: 0px 50px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    left: -51px; }
+    .footer .alerts i {
+      color: white;
+      font-weight: 600; }
+  .footer .ttp {
+    position: relative;
+    top: -14px;
+    left: -40px;
+    color: white; }
+    .footer .ttp i {
+      color: white; }
+
+/*# sourceMappingURL=main.css.map */

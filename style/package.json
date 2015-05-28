@@ -1,0 +1,8 @@
+{
+  "name": "node_scratch",
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "express": "^4.4.4",
+    "mongoose": "^3.8.20"
+  }
+}
